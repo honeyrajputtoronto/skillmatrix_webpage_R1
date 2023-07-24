@@ -13,18 +13,6 @@ class _DesktopBodyState extends State<DesktopBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 100,
-          color: Colors.red,
-        ),
-        Container(
-          height: 100,
-          color: Colors.blue,
-        ),
-        Container(
-          height: 100,
-          color: Colors.green,
-        ),
       ],
     );
   }
