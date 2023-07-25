@@ -4,8 +4,9 @@ import 'dimensions.dart';
 class ResponsiveLayout extends StatelessWidget {
   final Widget mobileBody;
   final Widget desktopBody;
+  final Widget tabletBody;
 
-  ResponsiveLayout({super.key, required this.mobileBody, required this.desktopBody});
+  ResponsiveLayout({super.key, required this.mobileBody, required this.desktopBody , required this.tabletBody});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,10 @@ class ResponsiveLayout extends StatelessWidget {
       builder: (context, constraints) {
         if (constraints.maxWidth < mobileWidth) {
           return mobileBody;
-        } else {
+        } else if (constraints.maxWidth < tabletWidth && constraints.maxWidth > mobileWidth) {
+          return tabletBody;
+        }
+        else {
           return desktopBody;
         }
       },
