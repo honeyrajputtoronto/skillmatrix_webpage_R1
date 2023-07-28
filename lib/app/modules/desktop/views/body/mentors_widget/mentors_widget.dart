@@ -6,6 +6,8 @@ import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
 
+import '../../../../../../utilities/gradient_text.dart';
+
 class MentorsWidget extends StatefulWidget {
   const MentorsWidget({super.key});
 
@@ -27,14 +29,25 @@ class _MentorsWidgetState extends State<MentorsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 50.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Expanded(
-              flex: 1,
-              child: Container(
-                  // height: 300,
-                  // width: 100,
+          GradientText(
+            'Mentors',
+            style: TextStyle(
+                fontSize: 8.sp, fontWeight: FontWeight.bold),
+            gradient: const LinearGradient(
+                colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+          ),
+          SizedBox(
+            height: 5.h,
+          ),
+          Row(
+            children: [
+              Expanded(
+                  flex: 1,
                   child: Padding(
                     padding: EdgeInsets.only(left: 12.w),
                     child: FanCarouselImageSlider(
@@ -48,30 +61,31 @@ class _MentorsWidgetState extends State<MentorsWidget> {
                       autoPlay: true,
                     ),
                   ),
-          ),
-          ),
-         Expanded(
-              flex: 2,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 100),
-                child: SizedBox(
-                  height: 300,
-                  // width: 300,
-                  child: ScrollLoopAutoScroll(
-                    enableScrollInput: false,
-                    duration: const Duration(seconds: 300),
-                    gap: 0,
-                    scrollDirection: Axis.vertical,
-                  child: Column(
-                     children: [
-                       for(int i = 0; i < 6; i++)
-                         makePhotoCard(i),
-                     ],
-                  ),
+              ),
+             Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 100),
+                    child: SizedBox(
+                      height: 300,
+                      // width: 300,
+                      child: ScrollLoopAutoScroll(
+                        enableScrollInput: false,
+                        duration: const Duration(seconds: 300),
+                        gap: 0,
+                        scrollDirection: Axis.vertical,
+                      child: Column(
+                         children: [
+                           for(int i = 0; i < 6; i++)
+                             makePhotoCard(i),
+                         ],
+                      ),
 
-                  ),
-                ),
-              ))
+                      ),
+                    ),
+                  ))
+            ],
+          ),
         ],
       ),
     );
@@ -79,7 +93,7 @@ class _MentorsWidgetState extends State<MentorsWidget> {
 
   Widget makePhotoCard(int index) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.white,
