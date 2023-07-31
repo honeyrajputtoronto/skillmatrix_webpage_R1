@@ -14,7 +14,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: const Color.fromARGB(255, 42, 40, 102),
         body: SingleChildScrollView(
           child: ResponsiveLayout(
             mobileBody: const MobileBody(),
