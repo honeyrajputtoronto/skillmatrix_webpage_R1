@@ -5,6 +5,8 @@ import 'body/mentors_widget/mentors_widget.dart';
 import 'body/faqs_widget/faq.dart';
 import 'footer/footer.dart';
 import 'header/header.dart';
+import 'learder/leader.dart';
+import 'landing/landing.dart';
 import 'body/video_widget/video_widget.dart';
 
 class DesktopBody extends StatefulWidget {
