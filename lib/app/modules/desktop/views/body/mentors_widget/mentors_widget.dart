@@ -18,12 +18,12 @@ class MentorsWidget extends StatefulWidget {
 class _MentorsWidgetState extends State<MentorsWidget> {
 
   final List<String> imagePaths = [
-    'participants/1.jpg',
-    'participants/2.jpg',
-    'participants/3.jpg',
-    'participants/4.jpg',
-    'participants/5.jpg',
-    'participants/6.jpg',
+    'assets/participants/1.jpg',
+    'assets/participants/2.jpg',
+    'assets/participants/3.jpg',
+    'assets/participants/4.jpg',
+    'assets/participants/5.jpg',
+    'assets/participants/6.jpg',
     // Add more image paths here
   ];
 

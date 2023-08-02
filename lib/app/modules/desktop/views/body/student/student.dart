@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:scroll_loop_auto_scroll/scroll_loop_auto_scroll.dart';
 import 'package:sizer/sizer.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 import '../../../../../../utilities/gradient_text.dart';
 
 class Student extends StatefulWidget {
@@ -14,12 +12,12 @@ class Student extends StatefulWidget {
 
 class _StudentState extends State<Student> {
   final List<String> imagePaths = [
-    'participants/1.jpg',
-    'participants/2.jpg',
-    'participants/3.jpg',
-    'participants/4.jpg',
-    'participants/5.jpg',
-    'participants/6.jpg',
+    'assets/participants/venkat.jpeg',
+    'assets/participants/linked.png',
+    'assets/participants/3.jpg',
+    'assets/participants/4.jpg',
+    'assets/participants/5.jpg',
+    'assets/participants/6.jpg',
     // Add more image paths here
   ];
 
@@ -28,10 +26,10 @@ class _StudentState extends State<Student> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 30),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
            Row(
-             mainAxisAlignment: MainAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -47,114 +45,116 @@ class _StudentState extends State<Student> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
-            child: ScrollLoopAutoScroll(
-              enableScrollInput: false,
-              duration: const Duration(seconds: 300),
-              gap: 0,
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20 ,horizontal: 20),
-                    child: Container(
-                      height: 250,
-                      width: 195,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 0.2,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20 ,horizontal: 20),
+              child: Container(
+                height: 250,
+                width: 195,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 0.2,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
+                  color: const Color.fromRGBO(255, 255, 255, 0.2),
+                ),
+                child: Column(
+                  children: [
+                    Stack(
+                      alignment: Alignment.center,
+                      clipBehavior: Clip.none,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            height: 160,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                imagePaths[0],
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
                         ),
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(20),
-                          bottomLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20),
+                        Positioned(
+                          top: 160 -
+                              15 -
+                              8, //minus height of profile ,-8 for padding
+                          child: InkWell(
+                            onTap: () {
+                              _launchUrl(
+                                  'https://www.linkedin.com/in/venkat-guru-prasad/');
+                            },
+                            child: CircleAvatar(
+                              radius: 34,
+                              backgroundColor:
+                                  const Color.fromRGBO(255, 255, 255, 0.5),
+                              child: CircleAvatar(
+                                radius: 30,
+                                backgroundImage: AssetImage(
+                                  imagePaths[1],
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
-                        color: const Color.fromRGBO(255, 255, 255, 0.2),
-                      ),
-                      child: Column(
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisSize: MainAxisSize.max,
                         children: [
-                          Stack(
-                            alignment: Alignment.center,
-                            clipBehavior: Clip.none,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: SizedBox(
-                                  height: 160,
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(20),
-                                    child: Image.asset(
-                                      imagePaths[0],
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                top: 160 -
-                                    15 -
-                                    8, //minus height of profile ,-8 for padding
-                                child: CircleAvatar(
-                                  radius: 34,
-                                  backgroundColor:
-                                      const Color.fromRGBO(255, 255, 255, 0.5),
-                                  child: CircleAvatar(
-                                    radius: 30,
-                                    backgroundImage: AssetImage(
-                                      imagePaths[1],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
+                          Text(
+                            "Python",
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.5),
+                                fontSize: 15),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Text(
-                                  "Python",
-                                  style: TextStyle(
-                                      color: Colors.white.withOpacity(0.5),
-                                      fontSize: 15),
-                                ),
-                                Text(
-                                  "April",
-                                  style: TextStyle(
-                                      color: Colors.white.withOpacity(0.5),
-                                      fontSize: 15),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "lorem ipsum splash",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
+                          Text(
+                            "April",
+                            style: TextStyle(
+                                color: Colors.white.withOpacity(0.5),
+                                fontSize: 15),
                           ),
                         ],
                       ),
                     ),
-                  ),
-                ],
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Venkat Guru Prasad",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
         ],
       ),
     );
+  }
+}
+
+Future<void> _launchUrl(url) async {
+  if (!await launchUrl(Uri.parse(url))) {
+    throw Exception('Could not launch $url');
   }
 }

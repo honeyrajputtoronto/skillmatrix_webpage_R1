@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:skillmatrix_new_webpage/utilities/faq_animation.dart';
-import '../../../../../utilities/gradient_text.dart';
+import '../../../../../../utilities/gradient_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatefulWidget {

@@ -43,6 +43,10 @@ dependencies:
   fan_carousel_image_slider: ^0.1.2
   youtube_player_flutter: ^8.1.2
   youtube_player_iframe: ^4.0.4
+  rive: ^0.11.8
+  hovering: ^1.0.4
+  gradient_borders: ^1.0.0
+  flutter_carousel_slider: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -69,7 +73,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/
+    - assets/images/
+    - assets/participants/
+    - assets/icons/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

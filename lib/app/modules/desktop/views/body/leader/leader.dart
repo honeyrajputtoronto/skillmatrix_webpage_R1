@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_text.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_box.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Leader extends StatelessWidget {
   const Leader({super.key});
@@ -10,14 +11,12 @@ class Leader extends StatelessWidget {
     return  Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Container(
-        color: Colors.orange.withOpacity(0.23),
+        //color: Colors.orange.withOpacity(0.23),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-           
-          
               Container(
-                color: Colors.blue.withOpacity(0.23),
+               // color: Colors.blue.withOpacity(0.23),
                 child: GradientText(
                 "Get Inspired by our industry leaders",
                 gradient:  const LinearGradient(
@@ -37,7 +36,7 @@ class Leader extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 18.w),
               child: Container(
-                 color: Colors.blue.withOpacity(0.23),
+                // color: Colors.blue.withOpacity(0.23),
                 child: Text(
                   "Every year, leaders in the tech industry join SkillMatrix to speak ,  and mentor students",
                   textAlign: TextAlign.center,
@@ -54,7 +53,7 @@ class Leader extends StatelessWidget {
           
            
                Container(
-                 color: Colors.blue.withOpacity(0.23),
+                // color: Colors.blue.withOpacity(0.23),
                  child: Row(
                   // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -90,27 +89,33 @@ class Leader extends StatelessWidget {
 
                             Row(
                               children: [
-                                Image.asset("assets/icons/linkdIn.png"),
+                                Image.asset("assets/icons/linkdIn.png",height: 30,),
                                 // AssetImage('assets/icons/linkdIn.png'),
-                                SizedBox(width: 2.w,),
-                                GradientText(
-                                  "Tarek Sadek",
-                                  gradient: const LinearGradient(
-                                    colors: [
-                                      Color.fromARGB(255, 232, 110, 128),
-                                      Color.fromARGB(255, 232, 156, 120),
-                                    ],
+                                const SizedBox(width: 20,),
+                                InkWell(
+                                  onTap: () {
+                                    _launchUrl(
+                                        'https://www.linkedin.com/in/tarek-sadek-45986410/');
+                                  },
+                                  child: GradientText(
+                                    "Tarek Sadek",
+                                    gradient: const LinearGradient(
+                                      colors: [
+                                        Color.fromARGB(255, 232, 110, 128),
+                                        Color.fromARGB(255, 232, 156, 120),
+                                      ],
+                                    ),
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 5.45.sp,
+                                        height: 1.59),
                                   ),
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 5.45.sp,
-                                      height: 1.59),
                                 ),
                               ],
                             ),
                             SizedBox(height: 1.6.h,),
                             Text(
-                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  enim, m.Lorem ipsum dolor sit amet, consectetur adipiscing elit.  enim, m.Lorem ipsum dolor sit amet, consectetur adipiscing elit.  enim, m. ",
+                              "Experienced innovation & product leader with 15+ years' experience in new ventures. Skilled in mentoring entrepreneurs, business development, strategic partnerships, and cross-functional team leadership. Expert in market research, product positioning, and C-level presentations. Strong writing skills with published research reports. Self-motivated, relationship-focused, and strategic thinker. ",
                              
                             
                               style: TextStyle(
@@ -133,4 +138,9 @@ class Leader extends StatelessWidget {
       ),
     );
   }
-}
+
+  Future<void> _launchUrl(url) async {
+    if (!await launchUrl(Uri.parse(url))) {
+      throw Exception('Could not launch $url');
+    }
+}}

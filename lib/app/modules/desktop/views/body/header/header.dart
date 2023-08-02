@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:hovering/hovering.dart';
 
 
 class Header extends StatefulWidget {
@@ -23,7 +23,7 @@ class _HeaderState extends State<Header> {
           Hero(
             tag: 'logo',
             child: Image.asset(
-              'images/logo.png',
+              'assets/images/logo.png',
               height: 3.w,
             ),
           ),
@@ -38,11 +38,24 @@ class _HeaderState extends State<Header> {
                   onTap: () {
                     //scrollToItem(itemKey1);
                   },
-                  child: Text(
-                    'About',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 4.sp,
+                  child: HoverContainer(
+                    hoverDecoration: const BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide( //                   <--- left side
+                          color: Color(0xFFE86E80),
+                          width: 3.0,
+                        ),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Text(
+                        'About',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 4.sp,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -54,11 +67,24 @@ class _HeaderState extends State<Header> {
                   onTap: () {
                     //scrollToItem(itemKey3);
                   },
-                  child: Text(
-                    'Mentors',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 4.sp,
+                  child: HoverContainer(
+                    hoverDecoration: const BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide( //                   <--- left side
+                          color: Color(0xFFE86E80),
+                          width: 3.0,
+                        ),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Text(
+                        'Mentors',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 4.sp,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -70,11 +96,24 @@ class _HeaderState extends State<Header> {
                   onTap: () {
                     //scrollToItem(itemKey5);
                   },
-                  child:Text(
-                    'Our Participants',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 4.sp,
+                  child:HoverContainer(
+                    hoverDecoration: const BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide( //                   <--- left side
+                          color: Color(0xFFE86E80),
+                          width: 3.0,
+                        ),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Text(
+                        'Our Participants',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 4.sp,
+                        ),
+                      ),
                     ),
                   ),
                 ),
