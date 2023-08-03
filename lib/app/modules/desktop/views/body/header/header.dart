@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:hovering/hovering.dart';
 
+import '../../../../../../utilities/scroll_controller.dart';
+
 
 class Header extends StatefulWidget {
   const Header({super.key});
@@ -36,7 +38,7 @@ class _HeaderState extends State<Header> {
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: GestureDetector(
                   onTap: () {
-                    //scrollToItem(itemKey1);
+                    scrollToItem(itemKey1);
                   },
                   child: HoverContainer(
                     hoverDecoration: const BoxDecoration(
@@ -65,38 +67,9 @@ class _HeaderState extends State<Header> {
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: GestureDetector(
                   onTap: () {
-                    //scrollToItem(itemKey3);
+                    scrollToItem(itemKey2);
                   },
                   child: HoverContainer(
-                    hoverDecoration: const BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide( //                   <--- left side
-                          color: Color(0xFFE86E80),
-                          width: 3.0,
-                        ),
-                      ),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: Text(
-                        'Mentors',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 4.sp,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 20),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: GestureDetector(
-                  onTap: () {
-                    //scrollToItem(itemKey5);
-                  },
-                  child:HoverContainer(
                     hoverDecoration: const BoxDecoration(
                       border: Border(
                         bottom: BorderSide( //                   <--- left side
@@ -118,6 +91,35 @@ class _HeaderState extends State<Header> {
                   ),
                 ),
               ),
+              const SizedBox(width: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: GestureDetector(
+                  onTap: () {
+                    scrollToItem(itemKey3);
+                  },
+                  child:HoverContainer(
+                    hoverDecoration: const BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide( //                   <--- left side
+                          color: Color(0xFFE86E80),
+                          width: 3.0,
+                        ),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Text(
+                        'Mentors',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 4.sp,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
           Container(
@@ -130,7 +132,9 @@ class _HeaderState extends State<Header> {
               borderRadius: BorderRadius.all(Radius.circular(50.0))
             ),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                scrollToItem(itemKey4);
+              },
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),

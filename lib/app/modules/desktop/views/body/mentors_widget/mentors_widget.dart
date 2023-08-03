@@ -5,7 +5,6 @@ import 'package:scroll_loop_auto_scroll/scroll_loop_auto_scroll.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
-
 import '../../../../../../utilities/gradient_text.dart';
 
 class MentorsWidget extends StatefulWidget {
@@ -24,7 +23,28 @@ class _MentorsWidgetState extends State<MentorsWidget> {
     'assets/participants/4.jpg',
     'assets/participants/5.jpg',
     'assets/participants/6.jpg',
+    'assets/mentors/9.jpg',
     // Add more image paths here
+  ];
+  final List<String> names = [
+    'Joelle Fleming',
+    'Fernando Davenport',
+    'Apollo Maynard',
+    'Adrianna Trujillo',
+    'Braylon Bruce',
+    'Carolyn Yates',
+    'Faraz Javaheri',
+    // Add more names here
+  ];
+  final List<String> designation = [
+    'Software Developer',
+    'Technical Team lead',
+    'Backend Developer',
+    'Software Consultant',
+    'Software Developer',
+    'Database Administrator',
+    'Business Developer',
+    // Add more names here
   ];
 
   @override
@@ -34,12 +54,25 @@ class _MentorsWidgetState extends State<MentorsWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          GradientText(
-            'Mentors',
-            style: TextStyle(
-                fontSize: 8.sp, fontWeight: FontWeight.bold),
-            gradient: const LinearGradient(
-                colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GradientText(
+                'Unlock Mentorship',
+                style: TextStyle(
+                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+              const SizedBox(
+                width: 5,
+              ),
+              Icon(
+                FontAwesomeIcons.lock,
+                color: Colors.grey,
+                size: 7.sp,
+              ),
+            ],
           ),
           SizedBox(
             height: 5.h,
@@ -51,7 +84,7 @@ class _MentorsWidgetState extends State<MentorsWidget> {
                   child: Padding(
                     padding: EdgeInsets.only(left: 12.w),
                     child: FanCarouselImageSlider(
-                      imagesLink: [imagePaths[0], imagePaths[1], imagePaths[2], imagePaths[3], imagePaths[4], imagePaths[5]],
+                      imagesLink: [imagePaths[0], imagePaths[1], imagePaths[2], imagePaths[3], imagePaths[4], imagePaths[5] ,imagePaths[6]],
                       sliderHeight: 20.w,
                       sliderWidth: 20.w,
                       expandImageHeight: 30.w,
@@ -76,8 +109,8 @@ class _MentorsWidgetState extends State<MentorsWidget> {
                         scrollDirection: Axis.vertical,
                       child: Column(
                          children: [
-                           for(int i = 0; i < 6; i++)
-                             makePhotoCard(i),
+                           for(int i = 0; i < 7; i++)
+                             makePhotoCard(i , names[i] , designation[i] ),
                          ],
                       ),
 
@@ -91,7 +124,7 @@ class _MentorsWidgetState extends State<MentorsWidget> {
     );
   }
 
-  Widget makePhotoCard(int index) {
+  Widget makePhotoCard(int index , String name ,String designation) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
       decoration: BoxDecoration(
@@ -119,7 +152,7 @@ class _MentorsWidgetState extends State<MentorsWidget> {
           //TODO: ADD MOUSE REGION
           onTap: () {
             _launchUrl(
-                'https://www.linkedin.com/company/skillmatrixtech/?viewAsMember=true');
+                'https://www.linkedin.com/in/faraz-javaheri/');
           },
           child: Container(
             height: 2.w,
@@ -140,16 +173,16 @@ class _MentorsWidgetState extends State<MentorsWidget> {
             ),
           ),
         ),
-        title: const Text(
-          'Name',
-          style: TextStyle(
+        title: Text(
+          name,
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 20,
           ),
         ),
-        subtitle: const Text(
-          'Role',
-          style: TextStyle(
+        subtitle: Text(
+          designation,
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 15,
           ),

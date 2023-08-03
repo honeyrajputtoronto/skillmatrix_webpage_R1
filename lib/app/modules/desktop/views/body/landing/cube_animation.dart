@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_slider/carousel_slider.dart';
+import 'package:sizer/sizer.dart';
+import '../../../../../../utilities/gradient_text.dart';
 
 class CubeAnimation extends StatefulWidget {
   const CubeAnimation({super.key});
@@ -19,17 +21,360 @@ class _CubeAnimationState extends State<CubeAnimation> {
     Colors.indigo,
     Colors.purple,
   ];
-  final List<String> letters = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-  ];
+  final List<Widget> faces = [
+    Container(
+      alignment: Alignment.center,
+      // color: colors[index],
+      child: Column(
+        children: [
+          Row(
+            children: [
+              GradientText(
+                'SKILL MATRIX',
+                style: TextStyle(
+                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              Text(
+                  'is the Canada\'s ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'only Knock- out',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
 
-  bool _isPlaying = true;
+              GradientText(
+                'Series ',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+              Text(
+                  'where students ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              GradientText(
+                'Battle ',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+              Text(
+                  'to showcase ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'their Skills',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+    Container(
+      alignment: Alignment.center,
+      // color: colors[index],
+      child: Column(
+        children: [
+          Row(
+            children: [
+              GradientText(
+                'KNOCKOUT SERIES',
+                style: TextStyle(
+                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              Text(
+                  'Compete ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'one-to-one ',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+              Text(
+                  'to win matches',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              Text(
+                  'and ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'rise ',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+              Text(
+                  'through the ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'levels',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+    Container(
+      alignment: Alignment.center,
+      // color: colors[index],
+      child: Column(
+        children: [
+          Row(
+            children: [
+              GradientText(
+                'INSTANT MATCHING',
+                style: TextStyle(
+                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              GradientText(
+                'Match ',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+              Text(
+                  'with the ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'best Opponent',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              Text(
+                  'based on your ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'Preparation',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+    Container(
+      alignment: Alignment.center,
+      // color: colors[index],
+      child: Column(
+        children: [
+          Row(
+            children: [
+              GradientText(
+                'CURATED QUESTIONS',
+                style: TextStyle(
+                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              Text(
+                  'Attempt ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'five questions ',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+              Text(
+                  'that are',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              GradientText(
+                'Carefully ',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+              Text(
+                  'picked from the topics ' ,
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'Topics',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              Text(
+                  'you\'ve ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'learnt',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+    Container(
+      alignment: Alignment.center,
+      // color: colors[index],
+      child: Column(
+        children: [
+          Row(
+            children: [
+              GradientText(
+                'INTENSE BATTLES',
+                style: TextStyle(
+                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+
+              GradientText(
+                'Quickest ',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+              Text(
+                  'to answer the ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'Questions',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10,),
+          Row(
+            children: [
+              Text(
+                  'correctly wins the ',
+                  style: TextStyle(
+                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+              ),
+              GradientText(
+                'Match',
+                style: TextStyle(
+                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                gradient: const LinearGradient(
+                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+              ),
+            ],
+          ),
+        ],
+      ),
+    ),
+
+  ];
 
   late CarouselSliderController _sliderController = _sliderController.setAutoSliderEnabled(true);
 
@@ -43,70 +388,19 @@ class _CubeAnimationState extends State<CubeAnimation> {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        Container(
-          height: 500,
+        SizedBox(
+          height: 300,
+          width: double.infinity,
           child: CarouselSlider.builder(
             unlimitedMode: true,
             controller: _sliderController,
             slideBuilder: (index) {
-              return Container(
-                alignment: Alignment.center,
-                color: colors[index],
-                child: Text(
-                  letters[index],
-                  style: TextStyle(fontSize: 200, color: Colors.white),
-                ),
-              );
+              return faces[index];
             },
-            slideTransform: CubeTransform(),
-            slideIndicator: CircularSlideIndicator(
-              padding: EdgeInsets.only(bottom: 32),
-              indicatorBorderColor: Colors.black,
-            ),
-            itemCount: colors.length,
+            slideTransform: const CubeTransform(),
+            itemCount: faces.length,
             initialPage: 0,
             enableAutoSlider: true,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 32),
-          child: Align(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(minWidth: 240, maxWidth: 600),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  IconButton(
-                    iconSize: 48,
-                    icon: const Icon(Icons.skip_previous),
-                    onPressed: () {
-                      _sliderController.previousPage();
-                    },
-                  ),
-                  IconButton(
-                    iconSize: 64,
-                    icon: Icon(
-                      _isPlaying ? Icons.pause_circle_outline : Icons.play_circle_outline,
-                    ),
-                    onPressed: () {
-                      setState(
-                            () {
-                          _isPlaying = !_isPlaying;
-                          _sliderController.setAutoSliderEnabled(_isPlaying);
-                        },
-                      );
-                    },
-                  ),
-                  IconButton(
-                    iconSize: 48,
-                    icon: const Icon(Icons.skip_next),
-                    onPressed: () {
-                      _sliderController.nextPage();
-                    },
-                  ),
-                ],
-              ),
-            ),
           ),
         ),
       ],

@@ -5,6 +5,7 @@ import 'package:sizer/sizer.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 import '../../../../../../utilities/gradient_text.dart';
+import '../../../../../../utilities/scroll_controller.dart';
 
 
 class VideoWidget extends StatefulWidget {
@@ -64,17 +65,17 @@ class _VideoWidgetState extends State<VideoWidget> {
               GradientText(
                 'How does it work?',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 8.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
               const SizedBox(
-                width: 30,
+                height: 40,
               ),
-              Container(
-                width: 30.w,
+              SizedBox(
+                width: 40.w,
                 child: Text(
-                  'We are a group of students from the University of Toronto who are passionate about helping students in need. We are a group of students from the University of Toronto.',
+                  'when you start a knockout competition you are matched with a student from other university who also joined under the same subject as you did, and from there you both get to battle each other by answering assessments with in 30-45 seconds, depending on the question which requires both accuracy and speed to win. Winners will rise on the leaderboard until, there is only one winner among all the universities participating in the knockout competition.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 4.sp,

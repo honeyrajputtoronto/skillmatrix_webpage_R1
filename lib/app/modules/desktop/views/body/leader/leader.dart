@@ -3,12 +3,14 @@ import 'package:sizer/sizer.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_text.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_box.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../../../../../utilities/scroll_controller.dart';
 
 class Leader extends StatelessWidget {
   const Leader({super.key});
   @override
   Widget build(BuildContext context) {
     return  Padding(
+      key: itemKey3,
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: Container(
         //color: Colors.orange.withOpacity(0.23),

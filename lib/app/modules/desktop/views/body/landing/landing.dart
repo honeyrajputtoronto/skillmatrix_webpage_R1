@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_box.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_text.dart';
-import 'package:flutter_carousel_slider/carousel_slider.dart';
-import 'package:flutter_carousel_slider/carousel_slider_indicators.dart';
-import 'package:flutter_carousel_slider/carousel_slider_transforms.dart';
+import '../../../../../../utilities/scroll_controller.dart';
+import 'cube_animation.dart';
 
 class Landing extends StatefulWidget {
   const Landing({super.key});
@@ -17,106 +16,19 @@ class _LandingState extends State<Landing> {
   @override
   Widget build(BuildContext context) {
     return Padding(
+      key: itemKey1,
       padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 80.0),
       child: Stack(children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: 34.w,
-              margin: EdgeInsets.symmetric(horizontal: 2.w),
-              child: RichText(
-                textAlign: TextAlign.left,
-                text: TextSpan(
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 6.9.sp,
-                      color: Colors.white,
-                      height: 1.6),
-                  children: [
-                    WidgetSpan(
-                      child: GradientText(
-                        'SKillMatrix ',
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 232, 110, 128),
-                            Color.fromARGB(255, 232, 156, 120),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        style: TextStyle(
-                            fontSize: 9.7.sp,
-                            fontWeight: FontWeight.bold,
-                            height: 1.16),
-                      ),
-                    ),
-                    const TextSpan(
-                      text: 'is the Canada\'s',
-                    ),
-                    WidgetSpan(
-                      child: GradientText(
-                        ' only Knock- out Series ',
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 232, 110, 128),
-                            Color.fromARGB(255, 232, 156, 120),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        style: TextStyle(
-                            fontSize: 6.9.sp,
-                            fontWeight: FontWeight.w700,
-                            height: 1.6),
-                      ),
-                    ),
-                    const TextSpan(
-                      text: 'where students ',
-                    ),
-                    WidgetSpan(
-                      child: GradientText(
-                        ' Battle ',
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 232, 110, 128),
-                            Color.fromARGB(255, 232, 156, 120),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        style: TextStyle(
-                            fontSize: 6.9.sp,
-                            fontWeight: FontWeight.w700,
-                            height: 1.6),
-                      ),
-                    ),
-                    const TextSpan(
-                      text: 'to showcase ',
-                    ),
-                    WidgetSpan(
-                      child: GradientText(
-                        'their skills ',
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 232, 110, 128),
-                            Color.fromARGB(255, 232, 156, 120),
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        style: TextStyle(
-                            fontSize: 6.9.sp,
-                            fontWeight: FontWeight.w700,
-                            height: 1.6),
-                      ),
-                    ),
-                  ],
-                ),
+            Padding(
+              padding: const EdgeInsets.only(left:50.0),
+              child: Container(
+                width: 50.w,
+                height: 300,
+                child: const CubeAnimation(),
               ),
-            ),
-            SizedBox(
-              height: 9.h,
             ),
             GradientBox(
               width: 100.w,

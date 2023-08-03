@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../../../utilities/gradient_text.dart';
+import '../../../../../../utilities/scroll_controller.dart';
 
 class Student extends StatefulWidget {
   const Student({super.key});
@@ -24,6 +25,7 @@ class _StudentState extends State<Student> {
   @override
   Widget build(BuildContext context) {
     return Padding(
+      key: itemKey2,
       padding: const EdgeInsets.symmetric(vertical: 30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

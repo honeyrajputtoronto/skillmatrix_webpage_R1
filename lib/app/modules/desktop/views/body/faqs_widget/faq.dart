@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../../../../../utilities/gradient_text.dart';
+import '../../../../../../utilities/scroll_controller.dart';
 
 class FaqWidget extends StatefulWidget {
   const FaqWidget({super.key});
@@ -15,6 +15,7 @@ class _FaqWidgetState extends State<FaqWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
+      key: itemKey4,
       padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -96,28 +97,28 @@ class _FaqWidgetState extends State<FaqWidget> {
               ),
             ],
           ),
-          ExpansionTile(
-            title: Text(
-              "What is SKillMatrix ?",
-              style: TextStyle(
-                fontSize: 5.sp,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical:10.0,horizontal: 50.0),
-                child: Text(
-                  "We provide a one-on-one learning experience in knockout series form, whereas, when you start a game you are matched with a player who also joined under the same subject as you did, and from there you both get to battle each other by answering assessments that require both accuracy and speed to win. Winners will rise on the leaderboard until there is only one winner among all the universities participated in the knockout competition.",
-                  style: TextStyle(
-                    fontSize: 4.sp,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ],
-          ),
+          // ExpansionTile(
+          //   title: Text(
+          //     "How does it work?",
+          //     style: TextStyle(
+          //       fontSize: 5.sp,
+          //       fontWeight: FontWeight.bold,
+          //       color: Colors.white,
+          //     ),
+          //   ),
+          //   children: [
+          //     Padding(
+          //       padding: const EdgeInsets.symmetric(vertical:10.0,horizontal: 50.0),
+          //       child: Text(
+          //         "when you start a knockout competition you are matched with a student from other university who also joined under the same subject as you did, and from there you both get to battle each other by answering assessments with in 30-45 seconds, depending on the question which requires both accuracy and speed to win. Winners will rise on the leaderboard until, there is only one winner among all the universities participating in the knockout competition.",
+          //         style: TextStyle(
+          //           fontSize: 4.sp,
+          //           color: Colors.white,
+          //         ),
+          //       ),
+          //     ),
+          //   ],
+          // ),
           ExpansionTile(
             title: Text(
               "I’m not currently enrolled as a student, can I still attend Skillmatrix competitions?",
