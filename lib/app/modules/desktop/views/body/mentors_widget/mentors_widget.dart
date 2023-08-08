@@ -49,77 +49,80 @@ class _MentorsWidgetState extends State<MentorsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 50.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GradientText(
-                'Unlock Mentorship',
-                style: TextStyle(
-                    fontSize: 8.sp, fontWeight: FontWeight.bold),
-                gradient: const LinearGradient(
-                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
-              ),
-              const SizedBox(
-                width: 5,
-              ),
-              Icon(
-                FontAwesomeIcons.lock,
-                color: Colors.grey,
-                size: 7.sp,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 5.h,
-          ),
-          Row(
-            children: [
-              Expanded(
-                  flex: 1,
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 12.w),
-                    child: FanCarouselImageSlider(
-                      imagesLink: [imagePaths[0], imagePaths[1], imagePaths[2], imagePaths[3], imagePaths[4], imagePaths[5] ,imagePaths[6]],
-                      sliderHeight: 20.w,
-                      sliderWidth: 20.w,
-                      expandImageHeight: 30.w,
-                      expandImageWidth: 30.w,
-                      imageRadius: 10,
-                      isAssets: true,
-                      autoPlay: true,
-                    ),
-                  ),
-              ),
-             Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 100),
-                    child: SizedBox(
-                      height: 300,
-                      // width: 300,
-                      child: ScrollLoopAutoScroll(
-                        enableScrollInput: false,
-                        duration: const Duration(seconds: 300),
-                        gap: 0,
-                        scrollDirection: Axis.vertical,
-                      child: Column(
-                         children: [
-                           for(int i = 0; i < 7; i++)
-                             makePhotoCard(i , names[i] , designation[i] ),
-                         ],
+    return Container(
+      color: const Color.fromARGB(255, 10, 22, 44),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 50.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GradientText(
+                  'Unlock Mentorship',
+                  style: TextStyle(
+                      fontSize: 7.sp, fontWeight: FontWeight.bold),
+                  gradient: const LinearGradient(
+                      colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Icon(
+                  FontAwesomeIcons.lock,
+                  color: Colors.grey,
+                  size: 7.sp,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            Row(
+              children: [
+                Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 12.w),
+                      child: FanCarouselImageSlider(
+                        imagesLink: [imagePaths[0], imagePaths[1], imagePaths[2], imagePaths[3], imagePaths[4], imagePaths[5] ,imagePaths[6]],
+                        sliderHeight: 20.w,
+                        sliderWidth: 20.w,
+                        expandImageHeight: 30.w,
+                        expandImageWidth: 30.w,
+                        imageRadius: 10,
+                        isAssets: true,
+                        autoPlay: true,
                       ),
+                    ),
+                ),
+               Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 100),
+                      child: SizedBox(
+                        height: 300,
+                        // width: 300,
+                        child: ScrollLoopAutoScroll(
+                          enableScrollInput: false,
+                          duration: const Duration(seconds: 300),
+                          gap: 0,
+                          scrollDirection: Axis.vertical,
+                        child: Column(
+                           children: [
+                             for(int i = 0; i < 7; i++)
+                               makePhotoCard(i , names[i] , designation[i] ),
+                           ],
+                        ),
 
+                        ),
                       ),
-                    ),
-                  ))
-            ],
-          ),
-        ],
+                    ))
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

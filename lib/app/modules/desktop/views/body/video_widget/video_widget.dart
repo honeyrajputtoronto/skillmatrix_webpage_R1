@@ -36,7 +36,7 @@ class _VideoWidgetState extends State<VideoWidget> {
       },
     );
 
-    _controller.loadVideoById(
+    _controller.cueVideoById(
       startSeconds: 0, videoId: 'EILuAN6GYqg',
     );
 
@@ -44,49 +44,52 @@ class _VideoWidgetState extends State<VideoWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 40.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(
-            height: 50.h,
-            width: 40.w,
-            child: YoutubePlayer(
-              controller: _controller,
-              aspectRatio: 16 / 9,
+    return Container(
+      color: const Color.fromARGB(255, 10, 22, 44),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 40.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              height: 50.h,
+              width: 40.w,
+              child: YoutubePlayer(
+                controller: _controller,
+                aspectRatio: 16 / 9,
+              ),
             ),
-          ),
-          // const SizedBox(
-          //   width: 30,
-          // ),
-          Column(
-            children:[
-              GradientText(
-                'How does it work?',
-                style: TextStyle(
-                    fontSize: 8.sp, fontWeight: FontWeight.bold),
-                gradient: const LinearGradient(
-                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              SizedBox(
-                width: 40.w,
-                child: Text(
-                  'when you start a knockout competition you are matched with a student from other university who also joined under the same subject as you did, and from there you both get to battle each other by answering assessments with in 30-45 seconds, depending on the question which requires both accuracy and speed to win. Winners will rise on the leaderboard until, there is only one winner among all the universities participating in the knockout competition.',
-                  textAlign: TextAlign.center,
+            // const SizedBox(
+            //   width: 30,
+            // ),
+            Column(
+              children:[
+                GradientText(
+                  'How does it work?',
                   style: TextStyle(
-                    fontSize: 4.sp,
-                    color: Colors.white,
+                      fontSize: 7.sp, fontWeight: FontWeight.bold),
+                  gradient: const LinearGradient(
+                      colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                SizedBox(
+                  width: 40.w,
+                  child: Text(
+                    'when you start a knockout competition you are matched with a student from other university who also joined under the same subject as you did, and from there you both get to battle each other by answering assessments with in 30-45 seconds, depending on the question which requires both accuracy and speed to win. Winners will rise on the leaderboard until, there is only one winner among all the universities participating in the knockout competition.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 4.sp,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              ),
 
-            ]
-          )
-        ],
+              ]
+            )
+          ],
+        ),
       ),
     );
   }

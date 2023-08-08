@@ -24,85 +24,7 @@ class _CubeAnimationState extends State<CubeAnimation> {
   final List<Widget> faces = [
     Container(
       alignment: Alignment.center,
-      // color: colors[index],
-      child: Column(
-        children: [
-          Row(
-            children: [
-              GradientText(
-                'SKILL MATRIX',
-                style: TextStyle(
-                    fontSize: 8.sp, fontWeight: FontWeight.bold),
-                gradient: const LinearGradient(
-                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
-              ),
-            ],
-          ),
-          const SizedBox(height: 10,),
-          Row(
-            children: [
-              Text(
-                  'is the Canada\'s ',
-                  style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
-              ),
-              GradientText(
-                'only Knock- out',
-                style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
-                gradient: const LinearGradient(
-                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
-              ),
-            ],
-          ),
-          const SizedBox(height: 10,),
-          Row(
-            children: [
-
-              GradientText(
-                'Series ',
-                style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
-                gradient: const LinearGradient(
-                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
-              ),
-              Text(
-                  'where students ',
-                  style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
-              ),
-            ],
-          ),
-          const SizedBox(height: 10,),
-          Row(
-            children: [
-              GradientText(
-                'Battle ',
-                style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
-                gradient: const LinearGradient(
-                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
-              ),
-              Text(
-                  'to showcase ',
-                  style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
-              ),
-              GradientText(
-                'their Skills',
-                style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
-                gradient: const LinearGradient(
-                    colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
-              ),
-            ],
-          ),
-        ],
-      ),
-    ),
-    Container(
-      alignment: Alignment.center,
-      // color: colors[index],
+      //color: colors[index],
       child: Column(
         children: [
           Row(
@@ -110,7 +32,7 @@ class _CubeAnimationState extends State<CubeAnimation> {
               GradientText(
                 'KNOCKOUT SERIES',
                 style: TextStyle(
-                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                    fontSize: 7.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -122,19 +44,19 @@ class _CubeAnimationState extends State<CubeAnimation> {
               Text(
                   'Compete ',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'one-to-one ',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
               Text(
                   'to win matches',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
             ],
           ),
@@ -144,24 +66,24 @@ class _CubeAnimationState extends State<CubeAnimation> {
               Text(
                   'and ',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'rise ',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
               Text(
                   'through the ',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'levels',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -180,7 +102,7 @@ class _CubeAnimationState extends State<CubeAnimation> {
               GradientText(
                 'INSTANT MATCHING',
                 style: TextStyle(
-                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                    fontSize: 7.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -192,19 +114,19 @@ class _CubeAnimationState extends State<CubeAnimation> {
               GradientText(
                 'Match ',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
               Text(
                   'with the ',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'best Opponent',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -216,12 +138,12 @@ class _CubeAnimationState extends State<CubeAnimation> {
               Text(
                   'based on your ',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'Preparation',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -240,7 +162,7 @@ class _CubeAnimationState extends State<CubeAnimation> {
               GradientText(
                 'CURATED QUESTIONS',
                 style: TextStyle(
-                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                    fontSize: 7.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -252,19 +174,19 @@ class _CubeAnimationState extends State<CubeAnimation> {
               Text(
                   'Attempt ',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'five questions ',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
               Text(
                   'that are',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
             ],
           ),
@@ -274,19 +196,19 @@ class _CubeAnimationState extends State<CubeAnimation> {
               GradientText(
                 'Carefully ',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
               Text(
-                  'picked from the topics ' ,
+                  'picked from the ' ,
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'Topics',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -298,12 +220,12 @@ class _CubeAnimationState extends State<CubeAnimation> {
               Text(
                   'you\'ve ',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'learnt',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -322,7 +244,7 @@ class _CubeAnimationState extends State<CubeAnimation> {
               GradientText(
                 'INTENSE BATTLES',
                 style: TextStyle(
-                    fontSize: 8.sp, fontWeight: FontWeight.bold),
+                    fontSize: 7.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -335,19 +257,19 @@ class _CubeAnimationState extends State<CubeAnimation> {
               GradientText(
                 'Quickest ',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
               Text(
                   'to answer the ',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'Questions',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -359,12 +281,12 @@ class _CubeAnimationState extends State<CubeAnimation> {
               Text(
                   'correctly wins the ',
                   style: TextStyle(
-                      fontSize: 6.sp, fontWeight: FontWeight.bold , color: Colors.white)
+                      fontSize: 5.sp, fontWeight: FontWeight.bold , color: Colors.white)
               ),
               GradientText(
                 'Match',
                 style: TextStyle(
-                    fontSize: 6.sp, fontWeight: FontWeight.bold),
+                    fontSize: 5.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),
@@ -392,10 +314,16 @@ class _CubeAnimationState extends State<CubeAnimation> {
           height: 300,
           width: double.infinity,
           child: CarouselSlider.builder(
+            scrollDirection: Axis.vertical,
             unlimitedMode: true,
             controller: _sliderController,
             slideBuilder: (index) {
-              return faces[index];
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  faces[index],
+                ],
+              );
             },
             slideTransform: const CubeTransform(),
             itemCount: faces.length,

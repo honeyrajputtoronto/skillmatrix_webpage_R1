@@ -54,9 +54,9 @@ class _FooterState extends State<Footer> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         GradientText(
-                          'SKILL MATRIX',
+                          'SKILLMATRIX',
                           style: TextStyle(
-                              fontSize: 6.sp, fontWeight: FontWeight.bold),
+                              fontSize: 5.sp, fontWeight: FontWeight.bold),
                           gradient: const LinearGradient(
                               colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
                         ),
@@ -75,9 +75,9 @@ class _FooterState extends State<Footer> {
                           height: 2.h,
                         ),
                         GradientText(
-                          'About Us',
+                          'Our Mission',
                           style: TextStyle(
-                              fontSize: 6.sp, fontWeight: FontWeight.bold),
+                              fontSize: 5.sp, fontWeight: FontWeight.bold),
                           gradient: const LinearGradient(
                               colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
                         ),
@@ -85,7 +85,7 @@ class _FooterState extends State<Footer> {
                           height: 1.h,
                         ),
                         Text(
-                          'Redefine Learning, Challenge the Status Quo!',
+                          'To empower students with immersive educational gaming,',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 4.sp,
@@ -93,7 +93,15 @@ class _FooterState extends State<Footer> {
                           ),
                         ),
                         Text(
-                          'Redefine Learning, Challenge the Status Quo!',
+                          'fostering growth through spirited competition,',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 4.sp,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'and creating a vibrant community of knowledge enthusiasts.',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 4.sp,
@@ -106,7 +114,7 @@ class _FooterState extends State<Footer> {
                         GradientText(
                           'Contact Us',
                           style: TextStyle(
-                              fontSize: 6.sp, fontWeight: FontWeight.bold),
+                              fontSize: 5.sp, fontWeight: FontWeight.bold),
                           gradient: const LinearGradient(
                               colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
                         ),
@@ -136,7 +144,7 @@ class _FooterState extends State<Footer> {
                             SizedBox(
                               width: 0.5.w,
                             ),
-                            GestureDetector(
+                            InkWell(
                               //TODO: ADD MOUSE REGION
                               onTap: () {
                                 _launchUrl(
