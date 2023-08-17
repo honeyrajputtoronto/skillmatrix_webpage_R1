@@ -23,10 +23,12 @@ class HomeView extends GetView<HomeController> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 10, 22, 44),
-        body: ResponsiveLayout(
-          mobileBody: const MobileBody(),
-          desktopBody: DesktopBody(),
-          tabletBody: DesktopBody(),  //TODO: Add tablet body
+        body: SingleChildScrollView(
+          child: ResponsiveLayout(
+            mobileBody: const MobileBody(),
+            desktopBody: DesktopBody(),
+            tabletBody: DesktopBody(),  //TODO: Add tablet body
+          ),
         ),
       ),
     );

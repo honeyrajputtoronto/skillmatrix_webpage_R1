@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:skillmatrix_new_webpage/app/modules/desktop/views/body/landing/rive_animation.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_box.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../../../utilities/scroll_controller.dart';
 import 'cube_animation.dart';
+
 
 class Landing extends StatefulWidget {
   const Landing({super.key});
@@ -121,14 +123,14 @@ class _LandingState extends State<Landing> {
                 )
               ],
             ),
-            Positioned(
-              bottom: 10,
-              right: 0,
+            const Positioned(
+              top: 10,
+              bottom: 0,
+              right: 30,
               child: SizedBox(
-                child: Image.asset(
-                  'assets/images/Knockout.png',
-                  height: 25.w,
-                ),
+                width: 500,
+                height: 500,
+                child: TrophyAnimation(),
               ),
             )
           ]),
