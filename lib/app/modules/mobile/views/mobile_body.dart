@@ -1,4 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+import '../../mobile/views/body/landing/landing.dart';
 
 class MobileBody extends StatefulWidget {
   const MobileBody({super.key});
@@ -10,7 +12,19 @@ class MobileBody extends StatefulWidget {
 class _MobileBodyState extends State<MobileBody> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder(
+    return const Column(
+      children: [
+        //Header(),
+        Landing(),
+        // Competition(),
+        // Student(),
+        // University(),
+        // VideoWidget(),
+        // Leader(),
+        // MentorsWidget(),
+        // FaqWidget(),
+        // Footer(),
+      ],
     );
   }
 }

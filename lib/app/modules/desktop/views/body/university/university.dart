@@ -53,7 +53,7 @@ class _UniversityState extends State<University> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 40),
+          padding: const EdgeInsets.only(bottom: 40 ,top: 0 ),
           child: SizedBox(
             width: 100.w,
             child: ScrollLoopAutoScroll(
@@ -72,7 +72,7 @@ class _UniversityState extends State<University> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 40.0),
+          padding: const EdgeInsets.only(bottom: 80.0 ,top: 40),
           child: SizedBox(
             width: 100.w,
             child: ScrollLoopAutoScroll(

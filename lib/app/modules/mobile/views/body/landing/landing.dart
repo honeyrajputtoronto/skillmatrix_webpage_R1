@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:skillmatrix_new_webpage/app/modules/desktop/views/body/landing/rive_animation.dart';
+import 'package:skillmatrix_new_webpage/app/modules/mobile/views/body/landing/rive_animation.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_box.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_text.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -33,14 +33,14 @@ class _LandingState extends State<Landing> {
           ),
         ),
         child: Padding(
-          key: itemKey1,
-          padding: const EdgeInsets.only(left: 50,right: 50,bottom: 80.0),
+          key: itemKey6,
+          padding: const EdgeInsets.only(left: 5,right: 5,bottom: 80.0),
           child: Stack(children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left:50.0),
+                  padding: const EdgeInsets.only(left:5.0),
                   child: Container(
                     width: 50.w,
                     height: 300,
@@ -70,7 +70,7 @@ class _LandingState extends State<Landing> {
                                   ),
                                   shape: BoxShape.rectangle,
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(50.0))),
+                                  BorderRadius.all(Radius.circular(50.0))),
                               child: ElevatedButton(
                                 onPressed: () {
                                   _launchUrl(
@@ -96,7 +96,7 @@ class _LandingState extends State<Landing> {
                                       color: const Color(0xFFE86E80), width: 2),
                                   shape: BoxShape.rectangle,
                                   borderRadius:
-                                      const BorderRadius.all(Radius.circular(50.0))),
+                                  const BorderRadius.all(Radius.circular(50.0))),
                               child: ElevatedButton(
                                 onPressed: () {
                                   _launchUrl(
@@ -133,16 +133,6 @@ class _LandingState extends State<Landing> {
             //     child: TrophyAnimation(),
             //   ),
             // )
-            Positioned(
-              bottom: 10,
-              right: 0,
-              child: SizedBox(
-                child: Image.asset(
-                  'assets/images/Knockout.png',
-                  height: 24.w,
-                ),
-              ),
-            )
           ]),
         ),
       ),

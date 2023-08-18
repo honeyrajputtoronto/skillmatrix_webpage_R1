@@ -15,7 +15,7 @@ class _CompetitionState extends State<Competition> {
   final List<String> imagePaths = [
     'assets/participants/venkat.jpeg',
     "assets/icons/linkdIn.png",
-    'assets/icons/pair.jpg',
+    'assets/icons/pair1.jpg',
     'assets/participants/4.jpg',
     'assets/participants/5.jpg',
     'assets/participants/6.jpg',
@@ -76,12 +76,12 @@ class _CompetitionState extends State<Competition> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: SizedBox(
-                              height: 160,
+                              // height: 150,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20),
                                 child: Image.asset(
                                   imagePaths[2],
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fitHeight,
                                 ),
                               ),
                             ),

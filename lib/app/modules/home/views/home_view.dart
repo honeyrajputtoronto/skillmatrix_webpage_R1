@@ -26,8 +26,8 @@ class HomeView extends GetView<HomeController> {
         body: SingleChildScrollView(
           child: ResponsiveLayout(
             mobileBody: const MobileBody(),
-            desktopBody: DesktopBody(),
-            tabletBody: DesktopBody(),  //TODO: Add tablet body
+            desktopBody: const DesktopBody(),
+            tabletBody: const DesktopBody(),  //TODO: Add tablet body
           ),
         ),
       ),

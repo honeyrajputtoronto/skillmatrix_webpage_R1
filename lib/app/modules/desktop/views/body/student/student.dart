@@ -81,7 +81,7 @@ class _StudentState extends State<Student> {
                                 borderRadius: BorderRadius.circular(20),
                                 child: Image.asset(
                                   imagePaths[0],
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.contain,
                                 ),
                               ),
                             ),

@@ -56,24 +56,32 @@ class _MentorsWidgetState extends State<MentorsWidget> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Text("Coming Winter 2024 ...", style: TextStyle(fontSize: 6.sp, fontWeight: FontWeight.bold,color: Colors.white),),
+            const SizedBox(
+              height: 20,
+            ),
+            Text("Unlock mentorship by winning the competition",style: TextStyle(fontSize: 4.sp, fontWeight: FontWeight.bold,color: Colors.white),),
+            const SizedBox(
+              height: 90,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GradientText(
-                  'Unlock Mentorship',
+                  'Mentors',
                   style: TextStyle(
                       fontSize: 7.sp, fontWeight: FontWeight.bold),
                   gradient: const LinearGradient(
                       colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
                 ),
-                const SizedBox(
-                  width: 5,
-                ),
-                Icon(
-                  FontAwesomeIcons.lock,
-                  color: Colors.grey,
-                  size: 7.sp,
-                ),
+                // const SizedBox(
+                //   width: 5,
+                // ),
+                // Icon(
+                //   FontAwesomeIcons.lock,
+                //   color: Colors.grey,
+                //   size: 7.sp,
+                // ),
               ],
             ),
             SizedBox(
