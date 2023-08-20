@@ -8,6 +8,8 @@ import 'package:sizer/sizer.dart';
 import 'package:skillmatrix_new_webpage/app/modules/desktop/views/body/competition/competition.dart';
 import 'package:skillmatrix_new_webpage/app/modules/desktop/views/body/student/student.dart';
 import 'package:skillmatrix_new_webpage/app/modules/desktop/views/body/university/university.dart';
+import 'package:skillmatrix_new_webpage/app/modules/desktop/views/body/download_app/download_app.dart';
+import 'package:skillmatrix_new_webpage/app/modules/desktop/views/body/sponsors/sponsors.dart';
 import '../../../../utilities/scroll_controller.dart';
 import 'body/mentors_widget/mentors_widget.dart';
 import 'body/faqs_widget/faq.dart';
@@ -68,6 +70,7 @@ class _DesktopBodyState extends State<DesktopBody> {
       children: [
         Header(),
         Landing(),
+        AppDownload(),
         Competition(),
         Student(),
         University(),
@@ -75,6 +78,7 @@ class _DesktopBodyState extends State<DesktopBody> {
         Leader(),
         MentorsWidget(),
         FaqWidget(),
+        Sponsors(),
         Footer(),
       ],
     );

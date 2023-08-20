@@ -25,7 +25,7 @@ class HomeView extends GetView<HomeController> {
         backgroundColor: const Color.fromARGB(255, 10, 22, 44),
         body: SingleChildScrollView(
           child: ResponsiveLayout(
-            mobileBody: const MobileBody(),
+            mobileBody: MobileBody(),
             desktopBody: const DesktopBody(),
             tabletBody: const DesktopBody(),  //TODO: Add tablet body
           ),

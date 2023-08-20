@@ -11,4 +11,5 @@ abstract class _Paths {
   _Paths._();
   static const HOME = '/';
   static const DESKTOP = '/desktop';
+  static const MOBILE = '/mobile';
 }

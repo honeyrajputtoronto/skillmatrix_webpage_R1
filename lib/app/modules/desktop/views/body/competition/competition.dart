@@ -35,15 +35,12 @@ class _CompetitionState extends State<Competition> {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: GradientText(
-                    'Competition of the Month',
-                    style: TextStyle(
-                        fontSize: 7.sp, fontWeight: FontWeight.bold),
-                    gradient: const LinearGradient(
-                        colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
-                  ),
+                GradientText(
+                  'Competition of the Month',
+                  style: TextStyle(
+                      fontSize: 7.sp, fontWeight: FontWeight.bold),
+                  gradient: const LinearGradient(
+                      colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
                 ),
               ],
             ),
@@ -53,7 +50,7 @@ class _CompetitionState extends State<Competition> {
                 padding: const EdgeInsets.symmetric(vertical: 20 ,horizontal: 20),
                 child: Container(
                   //height: 250,
-                  width: 340,
+                  width: 380,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.white,
