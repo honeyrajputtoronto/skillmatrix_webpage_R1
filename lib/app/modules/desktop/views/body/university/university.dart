@@ -41,7 +41,7 @@ class _UniversityState extends State<University> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 80),
+              padding: EdgeInsets.only(left: 30,right : 30, top: 50, bottom : 3.h),
               child: GradientText(
                 'Compete nationally with fellow students',
                 style: TextStyle(
@@ -53,7 +53,7 @@ class _UniversityState extends State<University> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 40 ,top: 0 ),
+          padding: const EdgeInsets.only(bottom: 10 ,top: 0 ),
           child: SizedBox(
             width: 100.w,
             child: ScrollLoopAutoScroll(
@@ -72,7 +72,7 @@ class _UniversityState extends State<University> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 80.0 ,top: 40),
+          padding: EdgeInsets.only(bottom: 10.h ,top: 20),
           child: SizedBox(
             width: 100.w,
             child: ScrollLoopAutoScroll(
@@ -102,7 +102,7 @@ class _UniversityState extends State<University> {
       child: Image.asset(
         imagePaths[i],
         fit: BoxFit.cover,
-        height: 7.h,
+        height: 6.h,
       ),
     );
   }
@@ -113,7 +113,7 @@ Widget makePhotoCard1(int i) {
     child: Image.asset(
       imagePaths1[i],
       fit: BoxFit.cover,
-      height: 7.h,
+      height: 6.h,
     ),
   );
 }

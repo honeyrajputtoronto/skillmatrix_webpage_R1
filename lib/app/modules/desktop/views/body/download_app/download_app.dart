@@ -36,32 +36,32 @@ class _AppDownloadState extends State<AppDownload> {
         const LaunchingSoon();
     } else {
       return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 9.w),
+        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
         child: Container(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GradientBox(
-                height: 10.6.h, //7.6.h,
-                width: 18.w, //12.w
+                height: 7.h, //7.6.h,
+                width: 10.w, //12.w
                 radius: 10,
                 padding: const EdgeInsets.all(8),
                 child: ElevatedButton(
                    onPressed: _onDownloadButtonClicked,
-                  style: ElevatedButton.styleFrom(                       
+                  style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.transparent,
                           shadowColor: Colors.transparent
                       ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    
+
                     children: [
                       SvgPicture.asset(
                         "assets/icons/download_app/apple.svg",
-                        height: 5.h,
-                        width: 5.w,
+                        height: 3.h,
+                        width: 3.w,
                       ),
                        Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -74,7 +74,7 @@ class _AppDownloadState extends State<AppDownload> {
                             textAlign: TextAlign.start,
                             style: TextStyle(
                                 fontWeight: FontWeight.w200,
-                                fontSize: 3.1.sp,
+                                fontSize: 2.sp,
                                 color: Color.fromARGB(224, 251, 251, 252),
                                 height: 1.21),
                           ),
@@ -84,7 +84,7 @@ class _AppDownloadState extends State<AppDownload> {
                              textAlign: TextAlign.start,
                             style: TextStyle(
                                 fontWeight: FontWeight.w700,
-                                fontSize: 4.sp,
+                                fontSize: 3.sp,
                                 color: Colors.white,
                                 height: 1.21),
                           ),
@@ -100,7 +100,7 @@ class _AppDownloadState extends State<AppDownload> {
 
               SizedBox(width: 2.w),
               CustomPaint(
-                size: Size(2.5.w, 9.w),
+                size: Size(1.w, 5.w),
                 painter: SlantLinePainter(),
               ),
               SizedBox(width: 2.w),
@@ -109,13 +109,13 @@ class _AppDownloadState extends State<AppDownload> {
 
 
               GradientBox(
-                height: 10.6.h,
-                width: 18.w,
+                height: 7.h,
+                width: 10.w,
                 radius: 5,
                 padding: const EdgeInsets.all(8),
                 child: ElevatedButton(
                   onPressed: _onDownloadButtonClicked,
-                  style: ElevatedButton.styleFrom(                       
+                  style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.transparent,
                           shadowColor: Colors.transparent
                       ),
@@ -125,8 +125,8 @@ class _AppDownloadState extends State<AppDownload> {
                     children: [
                       SvgPicture.asset(
                         "assets/icons/download_app/playstore.svg",
-                        height: 5.h,
-                        width: 5.w,
+                        height: 3.h,
+                        width: 3.w,
                       ),
                        Column(
                          mainAxisAlignment: MainAxisAlignment.center,
@@ -138,7 +138,7 @@ class _AppDownloadState extends State<AppDownload> {
                             textAlign: TextAlign.start,
                             style: TextStyle(
                                 fontWeight: FontWeight.w200,
-                                fontSize: 3.1.sp,
+                                fontSize: 2.sp,
                                 color: Color.fromARGB(224, 251, 251, 252),
                                 height: 1.21),
                           ),
@@ -148,7 +148,7 @@ class _AppDownloadState extends State<AppDownload> {
                             textAlign: TextAlign.start,
                             style: TextStyle(
                                 fontWeight: FontWeight.w700,
-                                fontSize: 4.sp,
+                                fontSize: 3.sp,
                                 color: Colors.white,
                                 height: 1.21),
                           ),

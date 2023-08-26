@@ -28,21 +28,24 @@ class _CompetitionState extends State<Competition> {
       color: const Color.fromARGB(255, 10, 22, 44),
       child: Padding(
        // key: itemKey2,
-        padding: const EdgeInsets.symmetric(vertical: 30),
+        padding: const EdgeInsets.symmetric(vertical: 30,),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                GradientText(
-                  'Competition of the Month',
-                  style: TextStyle(
-                      fontSize: 7.sp, fontWeight: FontWeight.bold),
-                  gradient: const LinearGradient(
-                      colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal : 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  GradientText(
+                    'Competition of the Month',
+                    style: TextStyle(
+                        fontSize: 7.sp, fontWeight: FontWeight.bold),
+                    gradient: const LinearGradient(
+                        colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+                  ),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),

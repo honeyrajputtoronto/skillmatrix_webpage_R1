@@ -18,7 +18,7 @@ class _FaqWidgetState extends State<FaqWidget> {
       color: const Color.fromARGB(255, 10, 22, 44),
       child: Padding(
         key: itemKey4,
-        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 12.w),
+        padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 12.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

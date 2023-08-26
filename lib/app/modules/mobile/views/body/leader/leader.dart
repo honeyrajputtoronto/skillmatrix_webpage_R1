@@ -136,10 +136,10 @@ class Leader extends StatelessWidget {
                             InkWell(
                               onTap: () {
                                 _launchUrl(
-                                    'https://www.linkedin.com/in/tarek-sadek-45986410/');
+                                    'https://www.linkedin.com/in/faraz-javaheri/');
                               },
                               child: GradientText(
-                                "Tarek Sadek",
+                                "Faraz Javaheri",
                                 gradient: const LinearGradient(
                                   colors: [
                                     Color.fromARGB(255, 232, 110, 128),

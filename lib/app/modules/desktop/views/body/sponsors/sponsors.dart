@@ -9,7 +9,7 @@ class Sponsors extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 30.h),
+      padding: EdgeInsets.only(left: 12.w,right: 12.w, top: 5.h, bottom: 2*5.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -28,20 +28,20 @@ class Sponsors extends StatelessWidget {
             ),
           ),
 
-          SizedBox(height: 14.h),
+          SizedBox(height: 5.h),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                "assets/icons/sponsors/EV.svg",
-                height: 0.7 * 10.h, // Scale height by 1.5
-                width: 0.7 * 23.w,  // Scale width by 1.5
-              ),
+              // SvgPicture.asset(
+              //   "assets/icons/sponsors/EV.svg",
+              //   height: 0.7 * 10.h, // Scale height by 1.5
+              //   width: 0.7 * 23.w,  // Scale width by 1.5
+              // ),
               Image.asset(
                 "assets/icons/sponsors/IBZ.png",
-                height: 10.h,
+                height: 7.h,
                 width: 23.w,
               ),
             ],

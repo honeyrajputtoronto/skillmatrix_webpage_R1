@@ -10,7 +10,7 @@ class LaunchingSoon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.w),
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
       child: Container(
         
         // color:Colors.pink[100],

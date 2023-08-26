@@ -52,11 +52,17 @@ class _MentorsWidgetState extends State<MentorsWidget> {
     return Container(
       color: const Color.fromARGB(255, 10, 22, 44),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 50.0),
+        padding: EdgeInsets.symmetric(vertical: 5.h, horizontal :12.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Coming Winter 2024 ...", style: TextStyle(fontSize: 6.sp, fontWeight: FontWeight.bold,color: Colors.white),),
+            GradientText(
+              'Coming winter 2024..',
+              style: TextStyle(
+                  fontSize: 7.sp, fontWeight: FontWeight.bold),
+              gradient: const LinearGradient(
+                  colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -91,40 +97,34 @@ class _MentorsWidgetState extends State<MentorsWidget> {
               children: [
                 Expanded(
                     flex: 1,
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 12.w),
-                      child: FanCarouselImageSlider(
-                        imagesLink: [imagePaths[0], imagePaths[1], imagePaths[2], imagePaths[3], imagePaths[4], imagePaths[5] ,imagePaths[6]],
-                        sliderHeight: 20.w,
-                        sliderWidth: 20.w,
-                        expandImageHeight: 30.w,
-                        expandImageWidth: 30.w,
-                        imageRadius: 10,
-                        isAssets: true,
-                        autoPlay: true,
-                      ),
+                    child: FanCarouselImageSlider(
+                      imagesLink: [imagePaths[0], imagePaths[1], imagePaths[2], imagePaths[3], imagePaths[4], imagePaths[5] ,imagePaths[6]],
+                      sliderHeight: 20.w,
+                      sliderWidth: 20.w,
+                      expandImageHeight: 30.w,
+                      expandImageWidth: 30.w,
+                      imageRadius: 10,
+                      isAssets: true,
+                      autoPlay: true,
                     ),
                 ),
                Expanded(
                     flex: 2,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 100),
-                      child: SizedBox(
-                        height: 300,
-                        // width: 300,
-                        child: ScrollLoopAutoScroll(
-                          enableScrollInput: false,
-                          duration: const Duration(seconds: 300),
-                          gap: 0,
-                          scrollDirection: Axis.vertical,
-                        child: Column(
-                           children: [
-                             for(int i = 0; i < 7; i++)
-                               makePhotoCard(i , names[i] , designation[i] ),
-                           ],
-                        ),
+                    child: SizedBox(
+                      height: 300,
+                      // width: 300,
+                      child: ScrollLoopAutoScroll(
+                        enableScrollInput: false,
+                        duration: const Duration(seconds: 300),
+                        gap: 0,
+                        scrollDirection: Axis.vertical,
+                      child: Column(
+                         children: [
+                           for(int i = 0; i < 7; i++)
+                             makePhotoCard(i , names[i] , designation[i] ),
+                         ],
+                      ),
 
-                        ),
                       ),
                     ))
               ],
@@ -137,7 +137,7 @@ class _MentorsWidgetState extends State<MentorsWidget> {
 
   Widget makePhotoCard(int index , String name ,String designation) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+      margin: const EdgeInsets.symmetric( vertical: 10),
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.white,

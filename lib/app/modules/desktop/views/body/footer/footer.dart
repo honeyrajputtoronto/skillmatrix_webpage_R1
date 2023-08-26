@@ -121,36 +121,35 @@ class _FooterState extends State<Footer> {
                         SizedBox(
                           height: 1.h,
                         ),
-                        Row(
-                          children: [
-                            Container(
-                              height: 2.w,
-                              width: 2.w,
-                              decoration: const BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: <Color>[
-                                    Color(0xFFE86E80),
-                                    Color(0xFFE89C78)
-                                  ],
+                        InkWell(
+                          onTap: () {
+                            _launchUrl(
+                                'https://www.linkedin.com/company/skillmatrixtech/?viewAsMember=true');
+                          },
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 2.w,
+                                width: 2.w,
+                                decoration: const BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: <Color>[
+                                      Color(0xFFE86E80),
+                                      Color(0xFFE89C78)
+                                    ],
+                                  ),
+                                  shape: BoxShape.circle,
                                 ),
-                                shape: BoxShape.circle,
+                                child: Icon(
+                                  FontAwesomeIcons.linkedinIn,
+                                  color: Colors.white,
+                                  size: 1.w,
+                                ),
                               ),
-                              child: Icon(
-                                FontAwesomeIcons.linkedinIn,
-                                color: Colors.white,
-                                size: 1.w,
+                              SizedBox(
+                                width: 0.5.w,
                               ),
-                            ),
-                            SizedBox(
-                              width: 0.5.w,
-                            ),
-                            InkWell(
-                              //TODO: ADD MOUSE REGION
-                              onTap: () {
-                                _launchUrl(
-                                    'https://www.linkedin.com/company/skillmatrixtech/?viewAsMember=true');
-                              },
-                              child: Text(
+                              Text(
                                 'SkillMatrix',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -158,8 +157,8 @@ class _FooterState extends State<Footer> {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),

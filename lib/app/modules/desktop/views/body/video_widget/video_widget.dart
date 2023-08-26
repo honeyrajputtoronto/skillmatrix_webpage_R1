@@ -47,7 +47,7 @@ class _VideoWidgetState extends State<VideoWidget> {
     return Container(
       color: const Color.fromARGB(255, 10, 22, 44),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 40.0),
+        padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 5.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

@@ -55,7 +55,7 @@ class _MentorsWidgetState extends State<MentorsWidget> {
       width: 100.w,
       color: const Color.fromARGB(255, 10, 22, 44),
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 4.w),
+        padding: EdgeInsets.only(left: 4.w,right :4.w,bottom: 10.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

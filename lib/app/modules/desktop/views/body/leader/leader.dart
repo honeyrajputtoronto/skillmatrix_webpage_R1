@@ -13,7 +13,7 @@ class Leader extends StatelessWidget {
       color: const Color.fromARGB(255, 10, 22, 44),
       child: Padding(
         key: itemKey3,
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 90),
+        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 5.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -80,23 +80,23 @@ class Leader extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/icons/linkdIn.png",
-                                height: 30,
-                              ),
-                              // AssetImage('assets/icons/linkdIn.png'),
-                              const SizedBox(
-                                width: 20,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  _launchUrl(
-                                      'https://www.linkedin.com/in/tarek-sadek-45986410/');
-                                },
-                                child: GradientText(
-                                  "Tarek Sadek",
+                          InkWell(
+                            onTap: () {
+                              _launchUrl(
+                                  'https://www.linkedin.com/in/faraz-javaheri/');
+                            },
+                            child: Row(
+                              children: [
+                                Image.asset(
+                                  "assets/icons/linkdIn.png",
+                                  height: 30,
+                                ),
+                                // AssetImage('assets/icons/linkdIn.png'),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                GradientText(
+                                  "Faraz Javaheri",
                                   gradient: const LinearGradient(
                                     colors: [
                                       Color.fromARGB(255, 232, 110, 128),
@@ -108,8 +108,8 @@ class Leader extends StatelessWidget {
                                       fontSize: 5.45.sp,
                                       height: 1.59),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                           SizedBox(
                             height: 1.6.h,

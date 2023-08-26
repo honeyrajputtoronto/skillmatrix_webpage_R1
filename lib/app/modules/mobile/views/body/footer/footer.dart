@@ -22,9 +22,10 @@ class _FooterState extends State<Footer> {
       child: Column(
         children: [
           SizedBox(
-            height: 30.w,
+            height: 40.w,
           ),
           Stack(
+            alignment: Alignment.center,
             clipBehavior: Clip.none,
             children :[
              Container(
@@ -111,36 +112,35 @@ class _FooterState extends State<Footer> {
                             SizedBox(
                               height: 1.w,
                             ),
-                            Row(
-                              children: [
-                                Container(
-                                  height: 4.w,
-                                  width: 4.w,
-                                  decoration: const BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: <Color>[
-                                        Color(0xFFE86E80),
-                                        Color(0xFFE89C78)
-                                      ],
+                            InkWell(
+                              onTap: () {
+                                _launchUrl(
+                                    'https://www.linkedin.com/company/skillmatrixtech/?viewAsMember=true');
+                              },
+                              child: Row(
+                                children: [
+                                  Container(
+                                    height: 4.w,
+                                    width: 4.w,
+                                    decoration: const BoxDecoration(
+                                      gradient: LinearGradient(
+                                        colors: <Color>[
+                                          Color(0xFFE86E80),
+                                          Color(0xFFE89C78)
+                                        ],
+                                      ),
+                                      shape: BoxShape.circle,
                                     ),
-                                    shape: BoxShape.circle,
+                                    child: Icon(
+                                      FontAwesomeIcons.linkedinIn,
+                                      color: Colors.white,
+                                      size: 3.w,
+                                    ),
                                   ),
-                                  child: Icon(
-                                    FontAwesomeIcons.linkedinIn,
-                                    color: Colors.white,
-                                    size: 3.w,
+                                  const SizedBox(
+                                    width: 10,
                                   ),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                InkWell(
-                                  //TODO: ADD MOUSE REGION
-                                  onTap: () {
-                                    _launchUrl(
-                                        'https://www.linkedin.com/company/skillmatrixtech/?viewAsMember=true');
-                                  },
-                                  child: Text(
+                                  Text(
                                     'SkillMatrix',
                                     style: TextStyle(
                                       color: Colors.white,
@@ -148,8 +148,8 @@ class _FooterState extends State<Footer> {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -256,119 +256,114 @@ class _FooterState extends State<Footer> {
               ),
             ),
               Positioned(
-                left: 7.w,
-                right: 7.w,
+                //left: 7.w,
+                //right: 7.w,
                 top: -150,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    BlurryContainer.square(
-                      child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.white,
-                              width: 0.2,
+                child: BlurryContainer.square(
+                  child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 0.2,
+                        ),
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(40),
+                          topRight: Radius.circular(40),
+                          bottomLeft: Radius.circular(40),
+                          bottomRight: Radius.circular(40),
+                        ),
+                       color: const Color.fromRGBO(255, 255, 255, 0.2),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal :4.w , vertical : 6.w),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Subscribe to our mailing list',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 5.w,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(40),
-                              topRight: Radius.circular(40),
-                              bottomLeft: Radius.circular(40),
-                              bottomRight: Radius.circular(40),
+                            const SizedBox(
+                              height: 20,
                             ),
-                           color: const Color.fromRGBO(255, 255, 255, 0.2),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(horizontal :4.w , vertical : 6.w),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Subscribe to our mailing list',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 5.w,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 20,
-                                ),
-                                SizedBox(
-                                  height: 30.w,
-                                  width: 300,
-                                  child: Form(
-                                    // key: controller.formKey,
-                                    child: Column(
-                                      crossAxisAlignment:
-                                      CrossAxisAlignment.center,
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        TextFormField(
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 4.w,
-                                          ),
-                                          decoration: InputDecoration(
-                                            fillColor: const Color.fromRGBO(
-                                                255, 255, 255, 0.2),
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius: BorderRadius.circular(10),
-                                              borderSide: const BorderSide(color: Color.fromRGBO(255, 255, 255, 0.2)),
-                                            ),
-                                            focusedBorder: OutlineInputBorder(
-                                              borderRadius: BorderRadius.circular(10),
-                                              borderSide: const BorderSide(color: Colors.white),
-                                            ),
-                                            hintText: 'Your Email',
-                                            hintStyle: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 4.w,
-                                              fontWeight: FontWeight.bold,
-                                            ),),
-                                          validator: (value) {
-                                            if (value == null || value.isEmpty) {
-                                              return 'Your email';
-                                            }
-                                            // You can add more complex email validation logic here if needed
-                                            return null;
-                                          },
-                                          onSaved: (value) {
-                                            // username = value!;
-                                            //   controller.username = value;
-                                          },
+                            SizedBox(
+                              height: 30.w,
+                              width: 300,
+                              child: Form(
+                                // key: controller.formKey,
+                                child: Column(
+                                  crossAxisAlignment:
+                                  CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    TextFormField(
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 2.h,
+                                      ),
+                                      decoration: InputDecoration(
+                                        fillColor: const Color.fromRGBO(
+                                            255, 255, 255, 0.2),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(10),
+                                          borderSide: const BorderSide(color: Color.fromRGBO(255, 255, 255, 0.2)),
                                         ),
-                                        const SizedBox(height: 20),
-                                        Container(
-                                          height: 10.w,
-                                          width: Get.width,
-                                          decoration: const BoxDecoration(gradient: LinearGradient(
-                                            colors: <Color>[Color(0xFFE86E80), Color(0xFFE89C78)],
-                                          ),
-                                              shape: BoxShape.rectangle,
-                                              borderRadius: BorderRadius.all(Radius.circular(10.0))
-                                          ),
-                                          child: ElevatedButton(
-                                            onPressed: () {},
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius.circular(50),
-                                                ),
-                                                backgroundColor: Colors.transparent,
-                                                shadowColor: Colors.transparent
-                                            ),
-                                            child: Text('Submit',style: TextStyle(fontSize: 4.w),),
-                                          ),
-                                        )
-                                      ],
+                                        focusedBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(10),
+                                          borderSide: const BorderSide(color: Colors.white),
+                                        ),
+                                        hintText: 'Your Email',
+                                        hintStyle: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 2.h,
+                                          fontWeight: FontWeight.bold,
+                                        ),),
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return 'Your email';
+                                        }
+                                        // You can add more complex email validation logic here if needed
+                                        return null;
+                                      },
+                                      onSaved: (value) {
+                                        // username = value!;
+                                        //   controller.username = value;
+                                      },
                                     ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          )),
-                    ),
-                  ],
+                                    const SizedBox(height: 20),
+                                    Container(
+                                      height: 10.w,
+                                      width: Get.width,
+                                      decoration: const BoxDecoration(gradient: LinearGradient(
+                                        colors: <Color>[Color(0xFFE86E80), Color(0xFFE89C78)],
+                                      ),
+                                          shape: BoxShape.rectangle,
+                                          borderRadius: BorderRadius.all(Radius.circular(10.0))
+                                      ),
+                                      child: ElevatedButton(
+                                        onPressed: () {},
+                                        style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(50),
+                                            ),
+                                            backgroundColor: Colors.transparent,
+                                            shadowColor: Colors.transparent
+                                        ),
+                                        child: Text('Submit',style: TextStyle(fontSize: 4.w),),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),),
                 ),
               ),
             ]

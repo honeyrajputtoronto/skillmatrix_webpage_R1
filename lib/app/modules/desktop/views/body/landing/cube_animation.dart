@@ -30,7 +30,7 @@ class _CubeAnimationState extends State<CubeAnimation> {
           Row(
             children: [
               GradientText(
-                'KNOCKOUT SERIES',
+                'ELIMINATION ROUNDS',
                 style: TextStyle(
                     fontSize: 7.sp, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(

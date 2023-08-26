@@ -5,6 +5,8 @@ import 'package:hovering/hovering.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../utilities/scroll_controller.dart';
+import '../../mobile/views/body/download_app/download_app.dart';
+import '../../mobile/views/body/sponsors/sponsors.dart';
 import '../../mobile/views/body/header/header.dart';
 import '../../mobile/views/body/footer/footer.dart';
 import '../../mobile/views/body/faq_widget/faq_widget.dart';
@@ -19,10 +21,6 @@ import '../controllers/mobile_controller.dart';
 
 class MobileBody extends GetView<MobileController> {
   MobileBody({super.key});
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,12 +28,13 @@ class MobileBody extends GetView<MobileController> {
       width: 100.w,
       child: SliderDrawer(
         appBar: SliderAppBar(
+          drawerIconColor: Colors.white,
           appBarPadding: EdgeInsets.zero,
            // appBarHeight: 5.h,
             appBarColor: const Color.fromARGB(255, 10, 22, 44),
             title: Text("Skillmatrix",
                 style: TextStyle(
-                    fontSize: 10.w, fontWeight: FontWeight.w700, color: Colors.white,))),
+                    fontSize: 6.w, fontWeight: FontWeight.w700, color: Colors.white,))),
         slider: const MenuScreen(),
         sliderOpenSize: 50.w,
         key: drawerKey,
@@ -54,6 +53,7 @@ class MainScreen extends GetView<MobileController>  {
       children: [
        // Header(),
         Landing(),
+        AppDownload(),
         Competition(),
         Student(),
         University(),
@@ -61,6 +61,7 @@ class MainScreen extends GetView<MobileController>  {
         Leader(),
         MentorsWidget(),
         FaqWidget(),
+        Sponsors(),
         Footer(),
       ],
     );
