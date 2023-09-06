@@ -10,9 +10,8 @@ class LaunchingSoon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+      padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
       child: Container(
-        
         // color:Colors.pink[100],
         child:  Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -22,36 +21,34 @@ class LaunchingSoon extends StatelessWidget {
           const GradientCircle(
             width: 10, 
             height: 10),
-
+           SizedBox(width: 1.w),
            const  GradientCircle(
             width: 20, 
             height: 20),
-
+            SizedBox(width: 1.w),
            const  GradientCircle(
             width: 30, 
             height: 30),
-
-            
-
+            SizedBox(width: 1.w),
               Text(
                 "Launching Soon",
                 // textAlign: TextAlign.center,
                 style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 10.sp,
-                    color: Color.fromARGB(224, 224, 225, 253),
+                    color: const Color.fromARGB(224, 224, 225, 253),
                     height: 1.21),
               ),
 
-
+            SizedBox(width: 1.w),
            const GradientCircle(
             width: 30, 
             height: 30),
-
+            SizedBox(width: 1.w),
            const  GradientCircle(
             width: 20, 
             height: 20),
-
+            SizedBox(width: 1.w),
             const GradientCircle(
             width: 10, 
             height: 10),

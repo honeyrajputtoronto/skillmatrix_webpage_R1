@@ -36,15 +36,16 @@ class _AppDownloadState extends State<AppDownload> {
         const LaunchingSoon();
     } else {
       return Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+        padding: EdgeInsets.symmetric(horizontal: 0, vertical: 00),
         child: Container(
+          //width: 50.w,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GradientBox(
-                height: 7.h, //7.6.h,
-                width: 10.w, //12.w
+                height: 7.2.h, //7.6.h,
+                width: 12.w, //12.w
                 radius: 10,
                 padding: const EdgeInsets.all(8),
                 child: ElevatedButton(
@@ -109,9 +110,9 @@ class _AppDownloadState extends State<AppDownload> {
 
 
               GradientBox(
-                height: 7.h,
-                width: 10.w,
-                radius: 5,
+                height: 7.2.h,
+                width: 12.w,
+                radius: 10,
                 padding: const EdgeInsets.all(8),
                 child: ElevatedButton(
                   onPressed: _onDownloadButtonClicked,
@@ -139,7 +140,7 @@ class _AppDownloadState extends State<AppDownload> {
                             style: TextStyle(
                                 fontWeight: FontWeight.w200,
                                 fontSize: 2.sp,
-                                color: Color.fromARGB(224, 251, 251, 252),
+                                color: const Color.fromARGB(224, 251, 251, 252),
                                 height: 1.21),
                           ),
 

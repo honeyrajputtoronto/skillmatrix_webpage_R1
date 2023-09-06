@@ -70,7 +70,7 @@ class _DesktopBodyState extends State<DesktopBody> {
       children: [
         Header(),
         Landing(),
-        AppDownload(),
+        //AppDownload(),
         Competition(),
         Student(),
         University(),

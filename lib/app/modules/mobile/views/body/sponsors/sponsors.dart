@@ -31,11 +31,11 @@ class Sponsors extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-                "assets/icons/sponsors/EV.svg",
-                //height: 0.7 * 10.h, // Scale height by 1.5
-                width: 30.w,  // Scale width by 1.5
-              ),
+              // SvgPicture.asset(
+              //   "assets/icons/sponsors/EV.svg",
+              //   //height: 0.7 * 10.h, // Scale height by 1.5
+              //   width: 30.w,  // Scale width by 1.5
+              // ),
               Image.asset(
                 "assets/icons/sponsors/IBZ.png",
                //height: 10.h,
@@ -44,7 +44,7 @@ class Sponsors extends StatelessWidget {
 
             ],
           ),
-          SizedBox(height: 10.w),
+          //SizedBox(height: 10.w),
         ],
       ),
     );

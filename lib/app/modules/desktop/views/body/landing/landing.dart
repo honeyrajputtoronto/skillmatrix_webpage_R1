@@ -5,6 +5,7 @@ import 'package:skillmatrix_new_webpage/utilities/gradient_box.dart';
 import 'package:skillmatrix_new_webpage/utilities/gradient_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../../../utilities/scroll_controller.dart';
+import '../../../../desktop/views/body/download_app/download_app.dart';
 import 'cube_animation.dart';
 
 
@@ -53,75 +54,79 @@ class _LandingState extends State<Landing> {
                     width: 100.w,
                     height: 20.h,
                     radius: 25,
-                    child: Row(
+                    child: const Row(
                       children: [
                         Expanded(
                           flex: 40,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Container(
-                                height: 2.8.w,
-                                width: 12.0.w,
-                                decoration: const BoxDecoration(
-                                    gradient: LinearGradient(
-                                      colors: <Color>[
-                                        Color(0xFFE86E80),
-                                        Color(0xFFE89C78),
-                                      ],
-                                    ),
-                                    shape: BoxShape.rectangle,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(50.0))),
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    _launchUrl(
-                                        'https://skillmatrix-application.web.app/#/login');
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                      backgroundColor: Colors.transparent,
-                                      shadowColor: Colors.transparent),
-                                  child: Text(
-                                    'SIGN IN',
-                                    style: TextStyle(fontSize: 4.sp),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                height: 2.8.w,
-                                width: 12.0.w,
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                        color: const Color(0xFFE86E80), width: 2),
-                                    shape: BoxShape.rectangle,
-                                    borderRadius:
-                                        const BorderRadius.all(Radius.circular(50.0))),
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    _launchUrl(
-                                        'https://skillmatrix-application.web.app/#/registration');
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                      backgroundColor: Colors.transparent,
-                                      shadowColor: Colors.transparent),
-                                  child: Text(
-                                    'SIGN UP',
-                                    style: TextStyle(fontSize: 4.sp),
-                                  ),
-                                ),
-                              )
+                              // Container(
+                              //   height: 2.8.w,
+                              //   width: 12.0.w,
+                              //   decoration: const BoxDecoration(
+                              //       gradient: LinearGradient(
+                              //         colors: <Color>[
+                              //           Color(0xFFE86E80),
+                              //           Color(0xFFE89C78),
+                              //         ],
+                              //       ),
+                              //       shape: BoxShape.rectangle,
+                              //       borderRadius:
+                              //           BorderRadius.all(Radius.circular(50.0))),
+                              //   child: ElevatedButton(
+                              //     onPressed: () {
+                              //       _launchUrl(
+                              //           'https://skillmatrix-application.web.app/#/login');
+                              //     },
+                              //     style: ElevatedButton.styleFrom(
+                              //         shape: RoundedRectangleBorder(
+                              //           borderRadius: BorderRadius.circular(50),
+                              //         ),
+                              //         backgroundColor: Colors.transparent,
+                              //         shadowColor: Colors.transparent),
+                              //     child: Text(
+                              //       'SIGN IN',
+                              //       style: TextStyle(fontSize: 4.sp),
+                              //     ),
+                              //   ),
+                              // ),
+                              // Container(
+                              //   height: 2.8.w,
+                              //   width: 12.0.w,
+                              //   decoration: BoxDecoration(
+                              //       border: Border.all(
+                              //           color: const Color(0xFFE86E80), width: 2),
+                              //       shape: BoxShape.rectangle,
+                              //       borderRadius:
+                              //           const BorderRadius.all(Radius.circular(50.0))),
+                              //   child: ElevatedButton(
+                              //     onPressed: () {
+                              //       _launchUrl(
+                              //           'https://skillmatrix-application.web.app/#/registration');
+                              //     },
+                              //     style: ElevatedButton.styleFrom(
+                              //         shape: RoundedRectangleBorder(
+                              //           borderRadius: BorderRadius.circular(50),
+                              //         ),
+                              //         backgroundColor: Colors.transparent,
+                              //         shadowColor: Colors.transparent),
+                              //     child: Text(
+                              //       'SIGN UP',
+                              //       style: TextStyle(fontSize: 4.sp),
+                              //     ),
+                              //   ),
+                              // ),
+                              AppDownload(),
                             ],
                           ),
                         ),
-                        const Expanded(flex: 41, child: SizedBox())
+                        Expanded(flex: 41, child: SizedBox())
                       ],
                     ),
+
+
+
                   )
                 ],
               ),
@@ -135,6 +140,10 @@ class _LandingState extends State<Landing> {
               //     child: TrophyAnimation(),
               //   ),
               // )
+              // const Positioned(
+              //     bottom: 0,
+              //     left: 0,
+              //     child: AppDownload()),
               Positioned(
                 bottom: 10,
                 right: 0,
