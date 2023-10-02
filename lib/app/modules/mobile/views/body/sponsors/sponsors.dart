@@ -14,7 +14,7 @@ class Sponsors extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           GradientText(
-            "Trusted and partnered with",
+            "Incubated In",
             gradient: const LinearGradient(
               colors: [
                 Color.fromARGB(255, 232, 110, 128),

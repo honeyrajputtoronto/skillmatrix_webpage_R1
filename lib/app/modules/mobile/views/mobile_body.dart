@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
+import 'package:get/get_rx/src/rx_types/rx_types.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:hovering/hovering.dart';
 import 'package:sizer/sizer.dart';
@@ -19,11 +21,192 @@ import '../../mobile/views/body/competition/competition.dart';
 import '../../mobile/views/body/landing/landing.dart';
 import '../controllers/mobile_controller.dart';
 
+RxInt i = 0.obs;
+Color  webcolor1 = const Color.fromARGB(255, 192, 192, 208).withOpacity(0.5);
+Color  webcolor2 = const Color.fromARGB(255, 192, 192, 208).withOpacity(0.28);
+
+
+class UniButton extends StatefulWidget {
+  const UniButton({Key? key}) : super(key: key);
+
+  @override
+  _UniButtonState createState() => _UniButtonState();
+}
+
+class _UniButtonState extends State<UniButton> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 00),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          InkWell(
+            onTap: () => setState(() {
+              webcolor2 = const Color.fromARGB(255, 192, 192, 208).withOpacity(0.5);
+              webcolor1 = const Color.fromARGB(255, 192, 192, 208).withOpacity(0.28);
+              i.value = 1;
+            }),
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: webcolor1,
+                  border: Border.all(
+                      width: 1,
+                      color: const Color.fromARGB(255, 133, 132, 178)
+                  )
+              ),
+              height: 7.2.h, //7.6.h,
+              width: 40.w, //12.w
+              padding: const EdgeInsets.all(8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "For Universities",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w200,
+                        fontSize: 9.sp,
+                        color: const Color.fromARGB(224, 251, 251, 252),
+                        height: 1.21),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(width: 2.w),
+          // CustomPaint(
+          //   size: Size(1.w, 5.w),
+          //   painter: SlantLinePainter(),
+          // ),
+          // SizedBox(width: 2.w),
+          InkWell(
+            onTap: () => setState(() {
+              webcolor1 = const Color.fromARGB(255, 192, 192, 208).withOpacity(0.5);
+              webcolor2 = const Color.fromARGB(255, 192, 192, 208).withOpacity(0.28);
+              i.value = 0;
+            }),
+            child: Container(
+              height: 7.2.h,
+              width: 40.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: webcolor2,
+                  border: Border.all(
+                      width: 1,
+                      color: const Color.fromARGB(255, 133, 132, 178)
+                  )
+              ),
+              padding: const EdgeInsets.all(8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "For Students",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w200,
+                        fontSize: 9.sp,
+                        color: const Color.fromARGB(224, 251, 251, 252),
+                        height: 1.21),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+List<Widget> WidgetList = [
+   Column(
+    children: [
+      // Header(),
+      SizedBox(
+        height: 2.h,
+      ),
+      const UniButton(),
+      const Landing(),
+      const AppDownload(),
+      const Competition(),
+      const Student(),
+      const University(),
+      const VideoWidget(),
+      // Leader(),
+      // MentorsWidget(),
+      const FaqWidget(),
+      const Sponsors(),
+      const Footer(),
+    ],
+  ),
+  Column(children: [
+    SizedBox(
+      height: 2.h,
+    ),
+    const UniButton(),
+    SizedBox(
+      height: 2.h,
+    ),
+    Image.asset(
+      "assets/phone/a1.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/phone/a2.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/phone/a3.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/phone/a4.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/phone/a5.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/phone/a6.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/phone/a7.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/phone/a8.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/phone/a9.jpg",
+      fit: BoxFit.cover,
+    ),
+    Image.asset(
+      "assets/phone/a10.jpg",
+      fit: BoxFit.cover,
+    ),
+    SizedBox(
+      height: 2.h,
+    ),
+    const Sponsors(),
+    const Footer(),
+  ]),
+];
+
+
 class MobileBody extends GetView<MobileController> {
   MobileBody({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 100.h,
       width: 100.w,
       child: SliderDrawer(
@@ -32,9 +215,17 @@ class MobileBody extends GetView<MobileController> {
           appBarPadding: EdgeInsets.zero,
            // appBarHeight: 5.h,
             appBarColor: const Color.fromARGB(255, 10, 22, 44),
-            title: Text("Skillmatrix",
-                style: TextStyle(
-                    fontSize: 6.w, fontWeight: FontWeight.w700, color: Colors.white,))),
+            // title: Text("Skillmatrix",
+            //     style: TextStyle(
+            //         fontSize: 6.w, fontWeight: FontWeight.w700, color: Colors.white,))
+            title: Hero(
+              tag: 'logo',
+              child: Image.asset(
+                'assets/images/logo.png',
+                height: 7.w,
+              ),
+            ),
+        ),
         slider: const MenuScreen(),
         sliderOpenSize: 50.w,
         key: drawerKey,
@@ -49,22 +240,7 @@ class MainScreen extends GetView<MobileController>  {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-       // Header(),
-        Landing(),
-        AppDownload(),
-        Competition(),
-        Student(),
-        University(),
-        VideoWidget(),
-        Leader(),
-        MentorsWidget(),
-        FaqWidget(),
-        Sponsors(),
-        Footer(),
-      ],
-    );
+    return Obx(() => WidgetList[i.value]);
   }
 }
 
@@ -88,16 +264,16 @@ class MenuScreen extends GetView<MobileController> {
             SizedBox(
               height: 5.h,
             ),
-            Hero(
-              tag: 'logo',
-              child: Image.asset(
-                'assets/images/logo.png',
-                height: 7.w,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
+            // Hero(
+            //   tag: 'logo',
+            //   child: Image.asset(
+            //     'assets/images/logo.png',
+            //     height: 7.w,
+            //   ),
+            // ),
+            // SizedBox(
+            //   height: 5.h,
+            // ),
             Column(
               children: [
                 Padding(

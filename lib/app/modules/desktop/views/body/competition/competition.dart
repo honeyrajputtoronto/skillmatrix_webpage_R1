@@ -47,110 +47,219 @@ class _CompetitionState extends State<Competition> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20 ,horizontal: 20),
-                child: Container(
-                  //height: 250,
-                  width: 380,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.white,
-                      width: 0.2,
-                    ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
-                    ),
-                    color: const Color.fromRGBO(255, 255, 255, 0.2),
-                  ),
-                  child: Column(
-                    children: [
-                      Stack(
-                        alignment: Alignment.center,
-                        clipBehavior: Clip.none,
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20 ,horizontal: 20),
+                    child: Container(
+                      //height: 250,
+                      width: 380,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 0.2,
+                        ),
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                        ),
+                        color: const Color.fromRGBO(255, 255, 255, 0.2),
+                      ),
+                      child: Column(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: SizedBox(
-                              // height: 150,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image.asset(
-                                  imagePaths[2],
-                                  fit: BoxFit.fitHeight,
+                          Stack(
+                            alignment: Alignment.center,
+                            clipBehavior: Clip.none,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                  // height: 150,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Image.asset(
+                                      imagePaths[2],
+                                      fit: BoxFit.fitHeight,
+                                    ),
+                                  ),
                                 ),
                               ),
+                              // Positioned(
+                              //   top: 160 -
+                              //       15 -
+                              //       8, //minus height of profile ,-8 for padding
+                              //   child: InkWell(
+                              //     onTap: () {
+                              //       _launchUrl(
+                              //           'https://www.linkedin.com/in/venkat-guru-prasad/');
+                              //     },
+                              //     child: CircleAvatar(
+                              //       radius: 26,
+                              //       backgroundColor:
+                              //       const Color.fromRGBO(255, 255, 255, 0.5),
+                              //       child: CircleAvatar(
+                              //         radius: 22,
+                              //         backgroundImage: AssetImage(
+                              //           imagePaths[1],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //   ),
+                              // ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left:35.0 , right: 35.0 , bottom: 8.0 ,  top: 0.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  "Python",
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(0.5),
+                                      fontSize: 15),
+                                ),
+                                const Spacer(),
+                                Text(
+                                  "April",
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(0.5),
+                                      fontSize: 15),
+                                ),
+                              ],
                             ),
                           ),
-                          // Positioned(
-                          //   top: 160 -
-                          //       15 -
-                          //       8, //minus height of profile ,-8 for padding
-                          //   child: InkWell(
-                          //     onTap: () {
-                          //       _launchUrl(
-                          //           'https://www.linkedin.com/in/venkat-guru-prasad/');
-                          //     },
-                          //     child: CircleAvatar(
-                          //       radius: 26,
-                          //       backgroundColor:
-                          //       const Color.fromRGBO(255, 255, 255, 0.5),
-                          //       child: CircleAvatar(
-                          //         radius: 22,
-                          //         backgroundImage: AssetImage(
-                          //           imagePaths[1],
-                          //         ),
+                          // const Padding(
+                          //   padding: EdgeInsets.only(left:10.0 , right: 10.0 , bottom: 30.0 ,  top: 0.0),
+                          //   child: Row(
+                          //     mainAxisAlignment: MainAxisAlignment.center,
+                          //     children: [
+                          //       Text(
+                          //         "Venkat Guru Prasad",
+                          //         style: TextStyle(
+                          //             color: Colors.white,
+                          //             fontSize: 20,
+                          //             fontWeight: FontWeight.bold),
                           //       ),
-                          //     ),
+                          //     ],
                           //   ),
                           // ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left:35.0 , right: 35.0 , bottom: 8.0 ,  top: 0.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              "Python",
-                              style: TextStyle(
-                                  color: Colors.white.withOpacity(0.5),
-                                  fontSize: 15),
-                            ),
-                            const Spacer(),
-                            Text(
-                              "April",
-                              style: TextStyle(
-                                  color: Colors.white.withOpacity(0.5),
-                                  fontSize: 15),
-                            ),
-                          ],
-                        ),
-                      ),
-                      // const Padding(
-                      //   padding: EdgeInsets.only(left:10.0 , right: 10.0 , bottom: 30.0 ,  top: 0.0),
-                      //   child: Row(
-                      //     mainAxisAlignment: MainAxisAlignment.center,
-                      //     children: [
-                      //       Text(
-                      //         "Venkat Guru Prasad",
-                      //         style: TextStyle(
-                      //             color: Colors.white,
-                      //             fontSize: 20,
-                      //             fontWeight: FontWeight.bold),
-                      //       ),
-                      //     ],
-                      //   ),
-                      // ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20 ,horizontal: 20),
+                    child: Container(
+                      //height: 250,
+                      width: 380,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 0.2,
+                        ),
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20),
+                          bottomLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                        ),
+                        color: const Color.fromRGBO(255, 255, 255, 0.2),
+                      ),
+                      child: Column(
+                        children: [
+                          Stack(
+                            alignment: Alignment.center,
+                            clipBehavior: Clip.none,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                  // height: 150,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Image.asset(
+                                      "assets/icons/winners.jpg",
+                                      fit: BoxFit.fitHeight,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              // Positioned(
+                              //   top: 160 -
+                              //       15 -
+                              //       8, //minus height of profile ,-8 for padding
+                              //   child: InkWell(
+                              //     onTap: () {
+                              //       _launchUrl(
+                              //           'https://www.linkedin.com/in/venkat-guru-prasad/');
+                              //     },
+                              //     child: CircleAvatar(
+                              //       radius: 26,
+                              //       backgroundColor:
+                              //       const Color.fromRGBO(255, 255, 255, 0.5),
+                              //       child: CircleAvatar(
+                              //         radius: 22,
+                              //         backgroundImage: AssetImage(
+                              //           imagePaths[1],
+                              //         ),
+                              //       ),
+                              //     ),
+                              //   ),
+                              // ),
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left:35.0 , right: 35.0 , bottom: 8.0 ,  top: 0.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  "SQL",
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(0.5),
+                                      fontSize: 15),
+                                ),
+                                const Spacer(),
+                                Text(
+                                  "September",
+                                  style: TextStyle(
+                                      color: Colors.white.withOpacity(0.5),
+                                      fontSize: 15),
+                                ),
+                              ],
+                            ),
+                          ),
+                          // const Padding(
+                          //   padding: EdgeInsets.only(left:10.0 , right: 10.0 , bottom: 30.0 ,  top: 0.0),
+                          //   child: Row(
+                          //     mainAxisAlignment: MainAxisAlignment.center,
+                          //     children: [
+                          //       Text(
+                          //         "Venkat Guru Prasad",
+                          //         style: TextStyle(
+                          //             color: Colors.white,
+                          //             fontSize: 20,
+                          //             fontWeight: FontWeight.bold),
+                          //       ),
+                          //     ],
+                          //   ),
+                          // ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

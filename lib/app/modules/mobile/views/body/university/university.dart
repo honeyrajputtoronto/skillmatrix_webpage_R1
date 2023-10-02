@@ -75,13 +75,14 @@ class _UniversityState extends State<University> {
               child: SizedBox(
                 width: 100.w,
                 child: ScrollLoopAutoScroll(
+                  reverseScroll: true,
                   // enableScrollInput: true,
                   duration: const Duration(seconds: 1500),
                   gap: 0,
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      for(int i = 0; i < 7; i++)
+                      for(int i = 0; i < 5; i++)
                         makePhotoCard(i),
                     ],
                   ),

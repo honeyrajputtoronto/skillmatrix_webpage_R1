@@ -35,7 +35,7 @@ class _CubeAnimationState extends State<CubeAnimation> {
               GradientText(
                 'ELIMINATION ROUNDS',
                 style: TextStyle(
-                    fontSize: 9.w, fontWeight: FontWeight.bold),
+                    fontSize: 8.w, fontWeight: FontWeight.bold),
                 gradient: const LinearGradient(
                     colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
               ),

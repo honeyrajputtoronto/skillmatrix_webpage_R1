@@ -67,8 +67,8 @@ class _MentorsWidgetState extends State<MentorsWidget> {
               height: 20,
             ),
             Text("Unlock mentorship by winning the competition",style: TextStyle(fontSize: 4.sp, fontWeight: FontWeight.bold,color: Colors.white),),
-            const SizedBox(
-              height: 90,
+            SizedBox(
+              height: 5.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

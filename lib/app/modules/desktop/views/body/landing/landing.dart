@@ -44,7 +44,7 @@ class _LandingState extends State<Landing> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left:50.0),
-                    child: Container(
+                    child: SizedBox(
                       width: 50.w,
                       height: 300,
                       child: const CubeAnimation(),

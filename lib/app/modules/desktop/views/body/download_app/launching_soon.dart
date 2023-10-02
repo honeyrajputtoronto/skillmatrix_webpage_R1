@@ -35,7 +35,7 @@ class LaunchingSoon extends StatelessWidget {
                 // textAlign: TextAlign.center,
                 style: TextStyle(
                     fontWeight: FontWeight.w700,
-                    fontSize: 10.sp,
+                    fontSize: 5.sp,
                     color: const Color.fromARGB(224, 224, 225, 253),
                     height: 1.21),
               ),
