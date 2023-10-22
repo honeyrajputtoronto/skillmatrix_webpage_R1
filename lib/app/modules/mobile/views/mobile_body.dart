@@ -7,6 +7,9 @@ import 'package:hovering/hovering.dart';
 import 'package:sizer/sizer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../utilities/scroll_controller.dart';
+import '../../mobile/views/body/university_modules/coming_soon.dart';
+import '../../mobile/views/body/university_modules/gamification.dart';
+import '../../mobile/views/body/university_modules/tournaments.dart';
 import '../../mobile/views/body/download_app/download_app.dart';
 import '../../mobile/views/body/sponsors/sponsors.dart';
 import '../../mobile/views/body/header/header.dart';
@@ -21,7 +24,7 @@ import '../../mobile/views/body/competition/competition.dart';
 import '../../mobile/views/body/landing/landing.dart';
 import '../controllers/mobile_controller.dart';
 
-RxInt i = 0.obs;
+RxInt i = 1.obs;
 Color  webcolor1 = const Color.fromARGB(255, 192, 192, 208).withOpacity(0.5);
 Color  webcolor2 = const Color.fromARGB(255, 192, 192, 208).withOpacity(0.28);
 
@@ -145,14 +148,24 @@ List<Widget> WidgetList = [
       const Footer(),
     ],
   ),
-  Column(children: [
-    SizedBox(
-      height: 2.h,
-    ),
+  Column(
+      children: [
+        SizedBox(
+          height: 2.h,
+        ),
     const UniButton(),
     SizedBox(
-      height: 2.h,
+      height: 4.w,
     ),
+    // const ComingSoon(),
+    // SizedBox(
+    //   height: 7.h,
+    // ),
+    // const Gamification(),
+    // SizedBox(
+    //   height: 7.h,
+    // ),
+    // const Tournaments(),
     Image.asset(
       "assets/phone/a1.jpg",
       fit: BoxFit.cover,

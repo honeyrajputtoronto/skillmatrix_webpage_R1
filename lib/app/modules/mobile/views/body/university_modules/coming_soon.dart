@@ -12,74 +12,70 @@ class ComingSoon extends StatelessWidget {
         Center(
           child: GradientText(
             'Coming Soon !!',
-            style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 8.w, fontWeight: FontWeight.bold),
             gradient: const LinearGradient(
                 colors: [Color(0xFFE86E80), Color(0xFFE89C78)]),
           ),
         ),
-        SizedBox(height: 6.h),
-        Row(
+        SizedBox(height: 2.h),
+        Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Expanded(
-                flex: 1,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 3.w),
-                  child: Column(children: [
-                    Text(
-                      'All you need to make learning awesome',
-                      style: TextStyle(
-                        fontSize: 9.sp,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                Text(
+                  textAlign: TextAlign.center,
+                  'All you need to make learning awesome',
+                  style: TextStyle(
+                    fontSize: 6.w,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(height: 1.h),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal : 8.w),
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'SkillMatrix is the all-in-one engagement, assessment, and review tool loved by teachers, students and admins.',
+                    style: TextStyle(
+                      fontSize: 3.w,
+                      fontWeight: FontWeight.w200,
+                      color: Colors.white,
                     ),
-                    SizedBox(height: 2.5.h),
-                    Text(
-                      'SkillMatrix is the all-in-one engagement, assessment, and review tool loved by teachers, students and admins.',
-                      style: TextStyle(
-                        fontSize: 5.sp,
-                        fontWeight: FontWeight.w200,
-                        color: Colors.white,
-                      ),
+                  ),
+                ),
+              ]),
+              Container(
+                height: 52.h,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        Image.asset(
+                          'assets/images/teamelimination.png',
+                         height: 40.w,
+                          width: 80.w,
+                        ),
+                        Positioned(
+                          bottom: -20.w,
+                          right: -10.w,
+                          child: Image.asset(
+                            'assets/images/head-to-head.png',
+                            height: 40.w,
+                            width: 80.w,
+                          ),
+                        ),
+                      ],
                     ),
-                  ]),
+                  ],
                 ),
               ),
-              Expanded(
-                  flex: 2,
-                  child: Container(
-                    height: 52.h,
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 10.w),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            clipBehavior: Clip.none,
-                            children: [
-                              Image.asset(
-                                'assets/images/teamelimination.png',
-                                height: 35.h,
-                                width: 35.w,
-                              ),
-                              Positioned(
-                                bottom: -17.h,
-                                right: -17.w,
-                                child: Image.asset(
-                                  'assets/images/head-to-head.png',
-                                  height: 35.h,
-                                  width: 35.w,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  )),
             ]),
         SizedBox(
           height: 7.h,

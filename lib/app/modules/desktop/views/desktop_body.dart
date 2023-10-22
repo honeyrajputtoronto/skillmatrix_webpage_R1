@@ -170,6 +170,9 @@ List<Widget> WidgetList = [
       height: 7.h,
     ),
     const Tournaments(),
+
+
+
     // Image.asset(
     //   "assets/images/w1.png",
     //   fit: BoxFit.cover,

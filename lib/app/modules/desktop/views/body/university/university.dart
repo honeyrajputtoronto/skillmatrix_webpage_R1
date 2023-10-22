@@ -12,6 +12,9 @@ final List<String> imagePaths = [
   'assets/university/15.png',
   'assets/university/17.png',
   'assets/university/18.png',
+  'assets/university/31.png',
+  'assets/university/32.png',
+
   // Add more image paths here
 ];
 
@@ -21,6 +24,8 @@ final List<String> imagePaths1 = [
   'assets/university/23.png',
   'assets/university/24.png',
   'assets/university/25.png',
+  'assets/university/33.png',
+  'assets/university/34.png',
   // Add more image paths here
 ];
 
@@ -49,20 +54,51 @@ class _UniversityState extends State<University> {
           ),
         ],
       ),
+      // Padding(
+      //   padding: const EdgeInsets.only(bottom: 10, top: 0),
+      //   child: SizedBox(
+      //     width: 100.w,
+      //     child: ScrollLoopAutoScroll(
+      //       enableScrollInput: true,
+      //       duration: const Duration(seconds: 1500),
+      //       gap: 0,
+      //       scrollDirection: Axis.horizontal,
+      //       child: Row(
+      //         children: [
+      //           for (int i = 0; i < imagePaths.length; i++) makePhotoCard(i),
+      //         ],
+      //       ),
+      //     ),
+      //   ),
+      // ),
+      // Padding(
+      //   padding: EdgeInsets.only(bottom: 10.h, top: 20),
+      //   child: SizedBox(
+      //     width: 100.w,
+      //     child: ScrollLoopAutoScroll(
+      //       reverseScroll: true,
+      //       enableScrollInput: true,
+      //       duration: const Duration(seconds: 1500),
+      //       gap: 0,
+      //       scrollDirection: Axis.horizontal,
+      //       child: Row(
+      //         children: [
+      //           for (int i = 0; i < 5; i++) makePhotoCard1(i),
+      //         ],
+      //       ),
+      //     ),
+      //   ),
+      // ),
+
       Padding(
         padding: const EdgeInsets.only(bottom: 10, top: 0),
         child: SizedBox(
           width: 100.w,
-          child: ScrollLoopAutoScroll(
-            enableScrollInput: true,
-            duration: const Duration(seconds: 1500),
-            gap: 0,
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                for (int i = 0; i < 7; i++) makePhotoCard(i),
-              ],
-            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              for (int i = 0; i < imagePaths.length; i++) makePhotoCard(i),
+            ],
           ),
         ),
       ),
@@ -70,17 +106,11 @@ class _UniversityState extends State<University> {
         padding: EdgeInsets.only(bottom: 10.h, top: 20),
         child: SizedBox(
           width: 100.w,
-          child: ScrollLoopAutoScroll(
-            reverseScroll: true,
-            enableScrollInput: true,
-            duration: const Duration(seconds: 1500),
-            gap: 0,
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                for (int i = 0; i < 5; i++) makePhotoCard1(i),
-              ],
-            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              for (int i = 0; i < imagePaths1.length; i++) makePhotoCard1(i),
+            ],
           ),
         ),
       ),
@@ -89,23 +119,17 @@ class _UniversityState extends State<University> {
 }
 
 Widget makePhotoCard(int i) {
-  return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 20.0),
-    child: Image.asset(
-      imagePaths[i],
-      fit: BoxFit.cover,
-      height: 6.h,
-    ),
+  return Image.asset(
+    imagePaths[i],
+    fit: BoxFit.cover,
+    height: 6.h,
   );
 }
 
 Widget makePhotoCard1(int i) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-    child: Image.asset(
-      imagePaths1[i],
-      fit: BoxFit.cover,
-      height: 6.h,
-    ),
+  return Image.asset(
+    imagePaths1[i],
+    fit: BoxFit.cover,
+    height: 6.h,
   );
 }
